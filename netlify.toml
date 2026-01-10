@@ -5,6 +5,12 @@
   status = 301
   force = true
 
+# Gumroad version
+[[redirects]]
+  from = "/gumroad"
+  to = "/gumroad.html"
+  status = 200
+
 # SPA fallback
 [[redirects]]
   from = "/*"
