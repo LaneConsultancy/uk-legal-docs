@@ -1,3 +1,11 @@
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.getlegaldocs.co.uk/*"
+  to = "https://getlegaldocs.co.uk/:splat"
+  status = 301
+  force = true
+
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -5,3 +13,4 @@
 
 [build]
   publish = "."
+  functions = "netlify/functions"
