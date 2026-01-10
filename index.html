@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Legal Docs - Privacy Policy & Terms Generator for UK Businesses</title>
+  <meta name="description" content="Generate GDPR-compliant Privacy Policies, Terms of Service, and Cookie Policies for your UK business. Lawyer-quality documents for £29.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --navy: #1e3a5f;
+      --navy-light: #2d4a6f;
+      --gold: #c9a227;
+      --gold-light: #e8c547;
+      --cream: #faf8f5;
+      --white: #ffffff;
+      --gray-100: #f5f5f5;
+      --gray-200: #e5e5e5;
+      --gray-400: #a3a3a3;
+      --gray-600: #525252;
+      --gray-800: #262626;
+      --red: #dc2626;
+      --green: #16a34a;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: var(--font-sans);
+      background: var(--cream);
+      color: var(--gray-800);
+      line-height: 1.6;
+    }
+    
+    /* ===== NAVIGATION ===== */
+    .nav {
+      background: var(--navy);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--navy);
+    }
+    
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.625rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    
+    .nav-cta:hover { background: var(--gold-light); }
+    
+    /* ===== HERO ===== */
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(30, 58, 95, 0.92) 0%, rgba(45, 74, 111, 0.88) 100%),
+        url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 5rem 1.5rem;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+    
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    
+    .hero-sub {
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    
+    .hero-price {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-price .amount { font-size: 2rem; font-family: var(--font-serif); }
+    .hero-price .compare { 
+      text-decoration: line-through; 
+      opacity: 0.7; 
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+    
+    .hero-note {
+      font-size: 0.875rem;
+    }
+    
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1.5rem;
+    }
+    
+    .trust-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+    
+    .trust-item svg { color: var(--green); }
+    
+    /* ===== WHAT YOU GET ===== */
+    .features {
+      padding: 5rem 1.5rem;
+      background: var(--white);
+    }
+    
+    .container { max-width: 1000px; margin: 0 auto; }
+    
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+    
+    .section-sub {
+      text-align: center;
+      color: var(--gray-600);
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .feature-card {
+      background: var(--cream);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+    
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--gold);
+    }
+    
+    .feature-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+    
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+    
+    /* ===== HOW IT WORKS ===== */
+    .how-it-works {
+      padding: 5rem 1.5rem;
+      background: var(--cream);
+    }
+    
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .step {
+      text-align: center;
+    }
+    
+    .step-num {
+      width: 50px;
+      height: 50px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+    }
+    
+    .step h3 { margin-bottom: 0.5rem; color: var(--navy); }
+    .step p { font-size: 0.9rem; color: var(--gray-600); }
+    
+    /* ===== FAQ ===== */
+    .faq {
+      padding: 5rem 1.5rem;
+      background: var(--white);
+    }
+    
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1.5rem 0;
+    }
+    
+    .faq-q {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-a {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+    }
+    
+    /* ===== CTA ===== */
+    .cta-section {
+      padding: 5rem 1.5rem;
+      background: var(--navy);
+      text-align: center;
+      color: var(--white);
+    }
+    
+    .cta-section h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: transform 0.2s, background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-cta:hover { 
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--gray-800);
+      color: var(--gray-200);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    .footer a { color: var(--gray-200); }
+    
+    /* ===== APP SECTION ===== */
+    .app-section {
+      display: none;
+      padding: 3rem 1.5rem;
+      min-height: 100vh;
+      background: var(--cream);
+    }
+    
+    .app-section.active { display: block; }
+    
+    .app-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    
+    .app-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1.5rem 2rem;
+    }
+    
+    .app-header h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+    }
+    
+    .app-header p {
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+      color: var(--gray-800);
+    }
+    
+    .app-progress {
+      background: var(--gray-100);
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .progress-bar {
+      height: 8px;
+      background: var(--gray-200);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+    
+    .progress-text {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      margin-top: 0.5rem;
+    }
+    
+    .app-body { padding: 2rem; }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+    
+    .form-group .helper {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="url"],
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+    }
+    
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--navy);
+    }
+    
+    .checkbox-item span { font-size: 0.95rem; }
+    
+    .btn-nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .btn {
+      flex: 1;
+      padding: 0.875rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      font-family: inherit;
+    }
+    
+    .btn-secondary {
+      background: var(--gray-100);
+      color: var(--gray-800);
+    }
+    
+    .btn-secondary:hover { background: var(--gray-200); }
+    
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+    
+    .btn-primary:hover { background: var(--navy-light); }
+    
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    
+    .btn-gold:hover { background: var(--gold-light); }
+    
+    /* ===== OUTPUT ===== */
+    .output-section { display: none; }
+    .output-section.active { display: block; }
+    
+    .document-tabs {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 2px solid var(--gray-200);
+      padding: 0 2rem;
+      background: var(--gray-100);
+    }
+    
+    .doc-tab {
+      padding: 1rem 1.5rem;
+      background: none;
+      border: none;
+      font-weight: 500;
+      color: var(--gray-600);
+      cursor: pointer;
+      position: relative;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    
+    .doc-tab.active {
+      color: var(--navy);
+    }
+    
+    .doc-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--navy);
+    }
+    
+    .document-output {
+      padding: 2rem;
+      background: var(--white);
+      min-height: 400px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    
+    .document-output h1 {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    
+    .document-output .last-updated {
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      font-size: 0.85rem;
+    }
+    
+    .document-output h2 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .document-output p { margin-bottom: 1rem; }
+    
+    .document-output ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    
+    .document-output li { margin-bottom: 0.5rem; }
+    
+    .download-bar {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .download-bar .btn { flex: none; }
+    
+    /* ===== LANDING HIDE WHEN APP ACTIVE ===== */
+    body.app-mode .landing-content { display: none; }
+    body.app-mode .app-section { display: block; }
+    
+    /* ===== GUARANTEE BADGE ===== */
+    .guarantee {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .guarantee svg { color: var(--gold); }
+
+    /* ===== HERO LINKS ===== */
+    .hero-links {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .hero-link {
+      color: rgba(255,255,255,0.85);
+      text-decoration: underline;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .hero-link:hover { color: var(--gold); }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials {
+      padding: 5rem 1.5rem;
+      background: var(--cream);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .testimonial-stars {
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-quote {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--gray-800);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      aspect-ratio: 1;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .testimonial-role {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .comparison {
+      padding: 5rem 1.5rem;
+      background: var(--white);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .comparison-table th {
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .comparison-table th:first-child {
+      text-align: left;
+      border-radius: 8px 0 0 0;
+    }
+
+    .comparison-table th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+
+    .comparison-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--gray-800);
+    }
+
+    .comparison-table .highlight {
+      background: rgba(201, 162, 39, 0.15);
+    }
+
+    .comparison-table th.highlight {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .comparison-table .check { color: var(--green); }
+    .comparison-table .cross { color: var(--red); opacity: 0.6; }
+
+    /* ===== STICKY CTA ===== */
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      display: none;
+      animation: slideUp 0.3s ease;
+    }
+
+    .sticky-cta.visible { display: block; }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .sticky-cta .btn-cta {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    /* ===== FAQ ACCORDION ===== */
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      user-select: none;
+    }
+
+    .faq-q:hover { color: var(--navy-light); }
+
+    .faq-chevron {
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-a {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 500px;
+      padding-bottom: 1.25rem;
+    }
+
+    /* ===== SAMPLE DOCUMENT MODAL ===== */
+    .sample-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .sample-modal.open { display: flex; }
+
+    .sample-modal-content {
+      background: var(--white);
+      border-radius: 16px;
+      max-width: 700px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .sample-modal-content h2 {
+      font-family: var(--font-serif);
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .sample-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--gray-600);
+      line-height: 1;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+
+    .sample-modal-close:hover { background: var(--gray-100); }
+
+    .sample-note {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--gray-100);
+      border-radius: 8px;
+    }
+
+    .sample-doc {
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .sample-doc h3 {
+      font-family: var(--font-serif);
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .sample-doc h4 {
+      color: var(--navy);
+      margin: 1.25rem 0 0.5rem;
+      font-size: 1rem;
+    }
+
+    .sample-doc p { margin-bottom: 0.75rem; }
+
+    .sample-doc ul {
+      margin-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sample-doc li { margin-bottom: 0.25rem; }
+
+    /* ===== MODAL (existing) ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-overlay.active { display: flex; }
+
+    .modal {
+      background: var(--white);
+      border-radius: 16px;
+      max-width: 700px;
+      width: 100%;
+      max-height: 90vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      padding: 1.5rem 2rem;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1;
+    }
+
+    .modal-body {
+      padding: 2rem;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .modal-body h4 {
+      color: var(--navy);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-body h4:first-child { margin-top: 0; }
+
+    .modal-body p { margin-bottom: 1rem; color: var(--gray-600); }
+
+    .modal-footer {
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--gray-200);
+      text-align: center;
+    }
+
+    /* ===== PAYMENT TRUST ===== */
+    .payment-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .payment-trust svg { opacity: 0.7; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      .hero { padding: 3rem 1.5rem; }
+      .features, .how-it-works, .faq, .cta-section, .testimonials, .comparison { padding: 3rem 1rem; }
+      .trust-inner { gap: 1rem; }
+      .trust-item { font-size: 0.8rem; }
+      .document-tabs { padding: 0 1rem; overflow-x: auto; }
+      .doc-tab { padding: 0.75rem 1rem; white-space: nowrap; }
+      .download-bar { flex-direction: column; }
+      .sticky-cta {
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+      }
+      .sticky-cta .btn-cta {
+        width: 100%;
+        justify-content: center;
+      }
+      .comparison-table { font-size: 0.85rem; }
+      .comparison-table th, .comparison-table td { padding: 0.75rem 0.5rem; }
+      .hero-links { flex-direction: column; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo" onclick="location.reload()">
+        <div class="logo-icon">LD</div>
+        <span>UK Legal Docs</span>
+      </a>
+      <a href="#" class="nav-cta" onclick="startApp(); return false;">Generate Documents</a>
+    </div>
+  </nav>
+
+  <!-- Landing Content -->
+  <div class="landing-content">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">🇬🇧 Updated for 2025 UK Regulations</div>
+        <h1>Legal Documents for Your UK Website — Done in 5 Minutes, Not 5 Hours</h1>
+        <p class="hero-sub">Answer 5 simple questions. Get all three legal documents your UK website needs — professionally written, GDPR-compliant, and ready to publish.</p>
+        <div class="hero-price" onclick="startApp()">
+          <span class="compare">Lawyers charge £500+</span>
+          <span>Just</span>
+          <span class="amount">£29</span>
+          <span>one-time</span>
+        </div>
+        <p class="hero-note">Instant download • No subscription • Free updates for life</p>
+        <p class="guarantee">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          30-Day Money-Back Guarantee — No Questions Asked
+        </p>
+        <div class="hero-links">
+          <a href="#" class="hero-link" onclick="openSampleModal(); return false;">See a sample document</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>UK GDPR Compliant</span>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Based on ICO Guidance</span>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>PECR Compliant</span>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Updated When Laws Change</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Three Documents. One Price. Zero Legal Headaches.</h2>
+        <p class="section-sub">Everything your UK website needs to be compliant, professionally written and tailored to your business.</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Privacy Policy</h3>
+            <p>Comprehensive GDPR-compliant privacy policy covering data collection, storage, third-party sharing, user rights, and more.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>Terms of Service</h3>
+            <p>Protect your business with clear terms covering liability, intellectual property, user conduct, and dispute resolution.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <h3>Cookie Policy</h3>
+            <p>PECR-compliant cookie policy explaining what cookies you use, why, and how users can control them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why UK Legal Docs -->
+    <section class="features" style="background: var(--cream);">
+      <div class="container">
+        <h2 class="section-title">Why UK Legal Docs</h2>
+        <p class="section-sub">Fast, affordable, and built specifically for UK businesses.</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <h3>Instant Download</h3>
+            <p>Get your documents as formatted Word files ready to add to your website. Copy, paste, done.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Tailored to You</h3>
+            <p>Answer simple questions about your business and get documents customised to exactly what you do.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Always Up-to-Date</h3>
+            <p>When UK data protection law changes, regenerate your documents for free. Forever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="section-title">Ready in 5 Minutes</h2>
+        <p class="section-sub">No legal knowledge required. Just answer a few simple questions.</p>
+        
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Tell Us About Your Business</h3>
+            <p>Business name, website, what you do — the basics.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Answer Simple Questions</h3>
+            <p>What data do you collect? Use cookies? Have a newsletter? Tick boxes, not legalese.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Download & Publish</h3>
+            <p>Get professionally formatted documents. Add to your website. You're done.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Trusted by UK Business Owners</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"I spent hours looking at free generators but they all felt generic. These documents actually cover what my e-commerce business does. Well worth the £29."</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SC</div>
+              <div>
+                <strong>Sarah C.</strong>
+                <span>Online Retailer, Manchester</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"As a freelance web designer, I needed proper T&Cs for client projects. Took 5 minutes and now I feel protected. Brilliant service."</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">JT</div>
+              <div>
+                <strong>James T.</strong>
+                <span>Freelance Designer, Bristol</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"Had a client ask if my website was GDPR compliant. Now I can confidently say yes. The cookie policy explained everything I needed."</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">RK</div>
+              <div>
+                <strong>Rachel K.</strong>
+                <span>Marketing Consultant, London</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Comparison -->
+    <section class="comparison">
+      <div class="container">
+        <h2 class="section-title">How We Compare</h2>
+        <p class="section-sub">Professional documents at a fraction of the cost</p>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Free Generators</th>
+              <th class="highlight">UK Legal Docs</th>
+              <th>Solicitor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Price</td>
+              <td>£0</td>
+              <td class="highlight"><strong>£29</strong></td>
+              <td>£300-800</td>
+            </tr>
+            <tr>
+              <td>UK Law Specific</td>
+              <td><span class="cross">✗</span></td>
+              <td class="highlight"><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Tailored to Your Business</td>
+              <td><span class="cross">✗</span></td>
+              <td class="highlight"><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Instant Generation</td>
+              <td><span class="check">✓</span></td>
+              <td class="highlight"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span> (days/weeks)</td>
+            </tr>
+            <tr>
+              <td>Free Updates for Life</td>
+              <td><span class="cross">✗</span></td>
+              <td class="highlight"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span> (extra fee)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-list">
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>Are these documents legally valid?</span>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-a">Yes. Our documents are based on ICO guidelines, UK GDPR, PECR, and the Consumer Rights Act 2015. They're designed to help UK businesses meet their legal obligations. However, for complex situations or if you need legal advice specific to your circumstances, we recommend consulting a solicitor.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>Do I need a privacy policy for my website?</span>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-a">If you collect any personal data (including via contact forms, analytics, cookies, or email signups), UK law requires you to have a privacy policy. The ICO can fine businesses up to £17.5 million for serious breaches.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>What about the cookie law?</span>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-a">PECR (Privacy and Electronic Communications Regulations) requires you to tell users about cookies and, for non-essential cookies, get their consent. Our cookie policy covers this. Note: you'll also need a cookie consent banner on your site — we include guidance on this.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>How is this different from free generators?</span>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-a">Free generators typically produce generic, one-size-fits-all documents that may not cover your specific situation or comply with current UK law. Our documents are tailored to your business type and activities, use plain English, and are kept up-to-date with legal changes.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>What if the law changes?</span>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-a">Come back and regenerate your documents for free — forever. We update our templates when UK data protection law changes so you're always compliant.</div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>Can I edit the documents?</span>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-a">Absolutely. You receive editable Word documents. Add your branding, tweak the wording, or have a solicitor review them.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="final-cta">
+      <h2>Your Documents Cost £29. ICO Fines Start at £500.</h2>
+      <p>Get all three legal documents your UK website needs. Professionally written, GDPR-compliant, and ready in minutes.</p>
+      <button class="btn-cta" onclick="startApp()">
+        Get All 3 Documents — £29
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="guarantee" style="margin-top: 1rem;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        30-Day Money-Back Guarantee — No Questions Asked
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="payment-trust">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Secure Payment</span>
+        <!-- Payment logos to be added when Stripe integrated -->
+      </div>
+      <p>© 2025 UK Legal Docs. This service provides document templates and is not a substitute for professional legal advice.</p>
+      <p style="margin-top: 0.5rem;"><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a> • <a href="mailto:support@uklegaldocs.co.uk">Contact</a></p>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+      <button class="btn-cta" onclick="startApp()">
+        Get All 3 Documents — £29
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Sample Document Modal -->
+    <div class="sample-modal" id="sampleModal">
+      <div class="sample-modal-content">
+        <button class="sample-modal-close" onclick="closeSampleModal()">&times;</button>
+        <h2>Sample Privacy Policy</h2>
+        <p class="sample-note">This is a redacted example. Your generated document will be fully customised to your business.</p>
+        <div class="sample-doc">
+          <h3>Privacy Policy for [Your Business Name]</h3>
+          <p><strong>Last updated:</strong> [Date]</p>
+
+          <h4>1. Introduction</h4>
+          <p>[Your Business Name] ("we", "us", or "our") is committed to protecting your personal data. This privacy policy explains how we collect, use, and protect your information when you visit [your-website.co.uk].</p>
+
+          <h4>2. Data Controller</h4>
+          <p>The data controller is [Your Business Name], registered at [Your Address]. For data protection enquiries, contact us at [your-email@example.co.uk].</p>
+
+          <h4>3. Information We Collect</h4>
+          <p>We may collect and process the following data:</p>
+          <ul>
+            <li>Contact information (name, email, phone)</li>
+            <li>Technical data (IP address, browser type)</li>
+            <li>[Additional data types based on your selections]</li>
+          </ul>
+
+          <h4>4. How We Use Your Data</h4>
+          <p>We use your personal data to:</p>
+          <ul>
+            <li>Provide our services to you</li>
+            <li>Respond to your enquiries</li>
+            <li>[Additional uses based on your selections]</li>
+          </ul>
+
+          <p style="text-align: center; color: var(--gray-600); margin-top: 2rem;">... and 8 more sections covering your rights, cookies, data retention, and more.</p>
+        </div>
+        <button class="btn-cta" onclick="closeSampleModal(); startApp();" style="margin-top: 1.5rem;">
+          Generate Your Own Documents — £29
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Section -->
+  <section class="app-section" id="app">
+    <div class="app-container">
+      <div class="app-header">
+        <h2>Generate Your Legal Documents</h2>
+        <p>Answer a few simple questions about your business</p>
+      </div>
+      
+      <div class="app-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <p class="progress-text"><span id="stepNum">1</span> of 5</p>
+      </div>
+      
+      <div class="app-body">
+        <!-- Step 1: Business Basics -->
+        <div class="form-step active" id="step1">
+          <div class="form-group">
+            <label>Business/Trading Name *</label>
+            <p class="helper">The name that will appear on your legal documents</p>
+            <input type="text" id="businessName" placeholder="e.g. Smith Plumbing Ltd" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Website URL *</label>
+            <input type="url" id="websiteUrl" placeholder="e.g. https://www.smithplumbing.co.uk">
+          </div>
+          
+          <div class="form-group">
+            <label>Business Email *</label>
+            <p class="helper">For data protection enquiries</p>
+            <input type="email" id="businessEmail" placeholder="e.g. info@smithplumbing.co.uk">
+          </div>
+          
+          <div class="form-group">
+            <label>Business Address</label>
+            <textarea id="businessAddress" rows="3" placeholder="Your registered or trading address"></textarea>
+          </div>
+          
+          <div class="btn-nav">
+            <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 2: Business Type -->
+        <div class="form-step" id="step2">
+          <div class="form-group">
+            <label>What type of business do you run? *</label>
+            <select id="businessType">
+              <option value="">Select your business type</option>
+              <option value="service">Service business (tradesperson, consultant, agency, etc.)</option>
+              <option value="ecommerce">E-commerce / Online shop</option>
+              <option value="saas">Software / SaaS</option>
+              <option value="content">Content / Blog / Media</option>
+              <option value="marketplace">Marketplace / Directory</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Briefly describe what your business does</label>
+            <textarea id="businessDescription" rows="3" placeholder="e.g. We provide boiler repairs and heating services to homeowners in Kent"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>Do you sell to consumers (B2C), businesses (B2B), or both?</label>
+            <select id="customerType">
+              <option value="b2c">Consumers (B2C)</option>
+              <option value="b2b">Businesses (B2B)</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+          
+          <div class="btn-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
+            <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 3: Data Collection -->
+        <div class="form-step" id="step3">
+          <div class="form-group">
+            <label>What personal data do you collect? *</label>
+            <p class="helper">Select all that apply</p>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataName" checked>
+                <span>Names</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataEmail" checked>
+                <span>Email addresses</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataPhone">
+                <span>Phone numbers</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataAddress">
+                <span>Physical addresses</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataPayment">
+                <span>Payment/billing information</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataAccount">
+                <span>Account login details</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataUsage">
+                <span>Usage data (how people use your site)</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="dataOther">
+                <span>Other personal data</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>How do you collect this data?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" id="collectForm" checked>
+                <span>Contact forms</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="collectCheckout">
+                <span>Checkout/booking process</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="collectNewsletter">
+                <span>Newsletter signup</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="collectAccount">
+                <span>Account registration</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="collectAuto">
+                <span>Automatically (analytics, cookies)</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="btn-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
+            <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 4: Third Parties & Cookies -->
+        <div class="form-step" id="step4">
+          <div class="form-group">
+            <label>Which third-party services do you use?</label>
+            <p class="helper">Select all that apply — these will be disclosed in your privacy policy</p>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpAnalytics" checked>
+                <span>Google Analytics or similar</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpPayment">
+                <span>Payment processor (Stripe, PayPal, etc.)</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpEmail">
+                <span>Email marketing (Mailchimp, etc.)</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpCrm">
+                <span>CRM system (HubSpot, etc.)</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpHosting">
+                <span>Cloud hosting (AWS, Google Cloud, etc.)</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpAds">
+                <span>Advertising (Google Ads, Facebook Ads)</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpSocial">
+                <span>Social media plugins/embeds</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" id="tpChat">
+                <span>Live chat or chatbots</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Do you use cookies on your website?</label>
+            <select id="useCookies">
+              <option value="yes">Yes (most websites do)</option>
+              <option value="essential">Only essential cookies</option>
+              <option value="no">No cookies at all</option>
+              <option value="unsure">I'm not sure</option>
+            </select>
+          </div>
+          
+          <div class="btn-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
+            <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+        
+        <!-- Step 5: Additional Options -->
+        <div class="form-step" id="step5">
+          <div class="form-group">
+            <label>Do you send marketing emails?</label>
+            <select id="sendMarketing">
+              <option value="yes">Yes, with user consent</option>
+              <option value="no">No</option>
+              <option value="planned">Planning to in future</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Do you have user accounts on your site?</label>
+            <select id="hasAccounts">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Do you allow user-generated content (comments, reviews, uploads)?</label>
+            <select id="hasUgc">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Is your target audience under 18?</label>
+            <select id="targetMinors">
+              <option value="no">No</option>
+              <option value="possible">Possibly some users</option>
+              <option value="yes">Yes, primarily</option>
+            </select>
+          </div>
+          
+          <div class="btn-nav">
+            <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
+            <button class="btn btn-gold" onclick="generateDocs()">Generate My Documents →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Output Section -->
+  <section class="output-section" id="output">
+    <div class="app-container">
+      <div class="app-header">
+        <h2>Your Legal Documents</h2>
+        <p>Review, copy, or download your customised documents</p>
+      </div>
+      
+      <div class="document-tabs">
+        <button class="doc-tab active" onclick="showDoc('privacy')">Privacy Policy</button>
+        <button class="doc-tab" onclick="showDoc('terms')">Terms of Service</button>
+        <button class="doc-tab" onclick="showDoc('cookies')">Cookie Policy</button>
+      </div>
+      
+      <div class="document-output" id="docOutput">
+        <!-- Generated document appears here -->
+      </div>
+      
+      <div class="download-bar">
+        <button class="btn btn-secondary" onclick="copyDoc()">
+          📋 Copy to Clipboard
+        </button>
+        <button class="btn btn-primary" onclick="downloadDoc()">
+          ⬇️ Download as Word Doc
+        </button>
+        <button class="btn btn-secondary" onclick="startOver()">
+          Start Over
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ============================================
+    // UK LEGAL DOCS - DOCUMENT GENERATOR
+    // ============================================
+    
+    let currentStep = 1;
+    const totalSteps = 5;
+    let formData = {};
+    let currentDoc = 'privacy';
+    let generatedDocs = {};
+
+    // ============================================
+    // FAQ ACCORDION
+    // ============================================
+    function toggleFaq(item) {
+      item.classList.toggle('open');
+    }
+
+    // ============================================
+    // SAMPLE DOCUMENT MODAL
+    // ============================================
+    function openSampleModal() {
+      document.getElementById('sampleModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSampleModal() {
+      document.getElementById('sampleModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeSampleModal();
+      }
+    });
+
+    // Close modal on backdrop click
+    document.getElementById('sampleModal')?.addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeSampleModal();
+      }
+    });
+
+    // ============================================
+    // STICKY CTA
+    // ============================================
+    function handleStickyCta() {
+      const hero = document.getElementById('hero');
+      const finalCta = document.getElementById('final-cta');
+      const stickyCta = document.getElementById('stickyCta');
+
+      if (!hero || !finalCta || !stickyCta) return;
+
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      const finalCtaTop = finalCta.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      // Show sticky CTA when scrolled past hero and before final CTA is visible
+      if (heroBottom < 0 && finalCtaTop > windowHeight) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', handleStickyCta);
+    window.addEventListener('resize', handleStickyCta);
+
+    function startApp() {
+      document.body.classList.add('app-mode');
+      document.getElementById('app').classList.add('active');
+      window.scrollTo(0, 0);
+    }
+    
+    function updateProgress() {
+      const percent = ((currentStep - 1) / (totalSteps - 1)) * 100;
+      document.getElementById('progressFill').style.width = percent + '%';
+      document.getElementById('stepNum').textContent = currentStep;
+    }
+    
+    function showStep(step) {
+      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+      document.getElementById('step' + step).classList.add('active');
+      updateProgress();
+    }
+    
+    function nextStep() {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+        window.scrollTo(0, 0);
+      }
+    }
+    
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+    
+    function collectFormData() {
+      formData = {
+        businessName: document.getElementById('businessName').value || 'Your Business Name',
+        websiteUrl: document.getElementById('websiteUrl').value || 'https://www.example.co.uk',
+        businessEmail: document.getElementById('businessEmail').value || 'info@example.co.uk',
+        businessAddress: document.getElementById('businessAddress').value || 'Your Business Address',
+        businessType: document.getElementById('businessType').value || 'service',
+        businessDescription: document.getElementById('businessDescription').value || 'Providing services to customers',
+        customerType: document.getElementById('customerType').value || 'b2c',
+        
+        // Data collection
+        dataName: document.getElementById('dataName').checked,
+        dataEmail: document.getElementById('dataEmail').checked,
+        dataPhone: document.getElementById('dataPhone').checked,
+        dataAddress: document.getElementById('dataAddress').checked,
+        dataPayment: document.getElementById('dataPayment').checked,
+        dataAccount: document.getElementById('dataAccount').checked,
+        dataUsage: document.getElementById('dataUsage').checked,
+        
+        collectForm: document.getElementById('collectForm').checked,
+        collectCheckout: document.getElementById('collectCheckout').checked,
+        collectNewsletter: document.getElementById('collectNewsletter').checked,
+        collectAccount: document.getElementById('collectAccount').checked,
+        collectAuto: document.getElementById('collectAuto').checked,
+        
+        // Third parties
+        tpAnalytics: document.getElementById('tpAnalytics').checked,
+        tpPayment: document.getElementById('tpPayment').checked,
+        tpEmail: document.getElementById('tpEmail').checked,
+        tpCrm: document.getElementById('tpCrm').checked,
+        tpHosting: document.getElementById('tpHosting').checked,
+        tpAds: document.getElementById('tpAds').checked,
+        tpSocial: document.getElementById('tpSocial').checked,
+        tpChat: document.getElementById('tpChat').checked,
+        
+        useCookies: document.getElementById('useCookies').value,
+        sendMarketing: document.getElementById('sendMarketing').value,
+        hasAccounts: document.getElementById('hasAccounts').value,
+        hasUgc: document.getElementById('hasUgc').value,
+        targetMinors: document.getElementById('targetMinors').value,
+        
+        // Generated date
+        date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+      };
+    }
+    
+    function generateDocs() {
+      collectFormData();
+      
+      generatedDocs.privacy = generatePrivacyPolicy();
+      generatedDocs.terms = generateTermsOfService();
+      generatedDocs.cookies = generateCookiePolicy();
+      
+      document.getElementById('app').classList.remove('active');
+      document.getElementById('output').classList.add('active');
+      showDoc('privacy');
+      window.scrollTo(0, 0);
+    }
+    
+    function showDoc(docType) {
+      currentDoc = docType;
+      document.querySelectorAll('.doc-tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById('docOutput').innerHTML = generatedDocs[docType];
+    }
+    
+    function copyDoc() {
+      const text = document.getElementById('docOutput').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Document copied to clipboard!');
+      });
+    }
+    
+    function downloadDoc() {
+      const content = document.getElementById('docOutput').innerHTML;
+      const blob = new Blob([`
+        <html>
+        <head><meta charset="utf-8"><title>${currentDoc}</title>
+        <style>body{font-family:Calibri,sans-serif;max-width:800px;margin:40px auto;line-height:1.6;color:#333}h1{color:#1e3a5f}h2{color:#1e3a5f;margin-top:30px}</style>
+        </head>
+        <body>${content}</body>
+        </html>
+      `], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${formData.businessName.replace(/[^a-z0-9]/gi, '-')}-${currentDoc}-policy.doc`;
+      a.click();
+    }
+    
+    function startOver() {
+      currentStep = 1;
+      document.getElementById('output').classList.remove('active');
+      document.getElementById('app').classList.add('active');
+      showStep(1);
+      window.scrollTo(0, 0);
+    }
+    
+    // ============================================
+    // DOCUMENT GENERATORS
+    // ============================================
+    
+    function generatePrivacyPolicy() {
+      let dataTypes = [];
+      if (formData.dataName) dataTypes.push('name');
+      if (formData.dataEmail) dataTypes.push('email address');
+      if (formData.dataPhone) dataTypes.push('telephone number');
+      if (formData.dataAddress) dataTypes.push('postal address');
+      if (formData.dataPayment) dataTypes.push('payment and billing information');
+      if (formData.dataAccount) dataTypes.push('account login credentials');
+      if (formData.dataUsage) dataTypes.push('website usage data and browsing behaviour');
+      
+      let collectionMethods = [];
+      if (formData.collectForm) collectionMethods.push('contact and enquiry forms');
+      if (formData.collectCheckout) collectionMethods.push('checkout or booking processes');
+      if (formData.collectNewsletter) collectionMethods.push('newsletter signup forms');
+      if (formData.collectAccount) collectionMethods.push('account registration');
+      if (formData.collectAuto) collectionMethods.push('automated technologies such as cookies and analytics');
+      
+      let thirdParties = [];
+      if (formData.tpAnalytics) thirdParties.push('Analytics providers (such as Google Analytics) to help us understand how our website is used');
+      if (formData.tpPayment) thirdParties.push('Payment processors (such as Stripe or PayPal) to securely handle transactions');
+      if (formData.tpEmail) thirdParties.push('Email marketing platforms to send you communications you have opted into');
+      if (formData.tpCrm) thirdParties.push('Customer relationship management systems to manage our customer communications');
+      if (formData.tpHosting) thirdParties.push('Cloud hosting providers who store our website and data securely');
+      if (formData.tpAds) thirdParties.push('Advertising networks to deliver relevant advertisements');
+      if (formData.tpSocial) thirdParties.push('Social media platforms when you interact with social features on our site');
+      if (formData.tpChat) thirdParties.push('Live chat providers to offer customer support');
+      
+      return `
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: ${formData.date}</p>
+        
+        <h2>1. Introduction</h2>
+        <p>${formData.businessName} ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal data when you visit our website at ${formData.websiteUrl} or use our services.</p>
+        <p>We are the data controller responsible for your personal data. If you have any questions about this policy or our data practices, please contact us at ${formData.businessEmail}.</p>
+        <p>This policy complies with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+        
+        <h2>2. Information We Collect</h2>
+        <p>We may collect and process the following types of personal data:</p>
+        <ul>
+          ${dataTypes.map(d => `<li>${d.charAt(0).toUpperCase() + d.slice(1)}</li>`).join('')}
+        </ul>
+        
+        <h2>3. How We Collect Your Data</h2>
+        <p>We collect personal data through the following methods:</p>
+        <ul>
+          ${collectionMethods.map(m => `<li>${m.charAt(0).toUpperCase() + m.slice(1)}</li>`).join('')}
+        </ul>
+        
+        <h2>4. How We Use Your Data</h2>
+        <p>We use your personal data for the following purposes:</p>
+        <ul>
+          <li>To provide and improve our products and services</li>
+          <li>To respond to your enquiries and provide customer support</li>
+          <li>To process transactions and send related information</li>
+          ${formData.sendMarketing === 'yes' ? '<li>To send marketing communications where you have consented</li>' : ''}
+          <li>To comply with legal obligations</li>
+          <li>To protect our legitimate business interests</li>
+        </ul>
+        
+        <h2>5. Legal Basis for Processing</h2>
+        <p>Under UK GDPR, we must have a lawful basis for processing your personal data. We rely on the following:</p>
+        <ul>
+          <li><strong>Consent:</strong> Where you have given clear consent for us to process your data for a specific purpose</li>
+          <li><strong>Contract:</strong> Where processing is necessary to perform a contract with you or take steps before entering a contract</li>
+          <li><strong>Legal obligation:</strong> Where we must process data to comply with the law</li>
+          <li><strong>Legitimate interests:</strong> Where processing is necessary for our legitimate business interests, provided these do not override your rights</li>
+        </ul>
+        
+        <h2>6. Data Sharing</h2>
+        <p>We may share your personal data with trusted third parties who assist us in operating our business:</p>
+        <ul>
+          ${thirdParties.map(tp => `<li>${tp}</li>`).join('')}
+        </ul>
+        <p>We require all third parties to respect the security of your personal data and treat it in accordance with the law. We do not sell your personal data to any third parties.</p>
+        
+        <h2>7. International Transfers</h2>
+        <p>Some of our third-party service providers may be located outside the UK. Where we transfer your data internationally, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses approved by the ICO, to protect your data.</p>
+        
+        <h2>8. Data Security</h2>
+        <p>We have implemented appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction. These measures include encryption, secure servers, and access controls.</p>
+        
+        <h2>9. Data Retention</h2>
+        <p>We will only retain your personal data for as long as necessary to fulfil the purposes for which it was collected, including to satisfy legal, accounting, or reporting requirements. When your data is no longer needed, we will securely delete or anonymise it.</p>
+        
+        <h2>10. Your Rights</h2>
+        <p>Under UK GDPR, you have the following rights:</p>
+        <ul>
+          <li><strong>Right of access:</strong> Request a copy of the personal data we hold about you</li>
+          <li><strong>Right to rectification:</strong> Request correction of inaccurate or incomplete data</li>
+          <li><strong>Right to erasure:</strong> Request deletion of your personal data in certain circumstances</li>
+          <li><strong>Right to restrict processing:</strong> Request that we limit how we use your data</li>
+          <li><strong>Right to data portability:</strong> Request transfer of your data to another service provider</li>
+          <li><strong>Right to object:</strong> Object to processing based on legitimate interests or for direct marketing</li>
+          <li><strong>Right to withdraw consent:</strong> Withdraw consent at any time where we rely on consent to process your data</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us at ${formData.businessEmail}. We will respond to your request within one month.</p>
+        
+        <h2>11. Cookies</h2>
+        <p>Our website uses cookies to improve your experience. For detailed information about the cookies we use, please see our Cookie Policy.</p>
+        
+        ${formData.targetMinors !== 'no' ? `
+        <h2>12. Children's Privacy</h2>
+        <p>We take the privacy of children seriously. If you are under 13 years old, please ask your parent or guardian before providing any personal data. If we become aware that we have collected personal data from a child without appropriate consent, we will take steps to delete that information.</p>
+        ` : ''}
+        
+        <h2>${formData.targetMinors !== 'no' ? '13' : '12'}. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+        
+        <h2>${formData.targetMinors !== 'no' ? '14' : '13'}. Complaints</h2>
+        <p>If you have concerns about how we handle your personal data, please contact us first at ${formData.businessEmail}. You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a> or by calling 0303 123 1113.</p>
+        
+        <h2>${formData.targetMinors !== 'no' ? '15' : '14'}. Contact Us</h2>
+        <p>For any questions about this Privacy Policy or our data practices, please contact:</p>
+        <p>
+          ${formData.businessName}<br>
+          ${formData.businessAddress.replace(/\n/g, '<br>')}<br>
+          Email: ${formData.businessEmail}
+        </p>
+      `;
+    }
+    
+    function generateTermsOfService() {
+      const isEcommerce = formData.businessType === 'ecommerce';
+      const isSaas = formData.businessType === 'saas';
+      
+      return `
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last updated: ${formData.date}</p>
+        
+        <h2>1. Introduction</h2>
+        <p>These Terms of Service ("Terms") govern your use of the website ${formData.websiteUrl} and any services provided by ${formData.businessName} ("we", "us", or "our").</p>
+        <p>By accessing our website or using our services, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our website or services.</p>
+        
+        <h2>2. About Us</h2>
+        <p>${formData.businessName}<br>
+        ${formData.businessAddress.replace(/\n/g, '<br>')}<br>
+        Contact: ${formData.businessEmail}</p>
+        
+        <h2>3. Use of Our Website</h2>
+        <p>You may use our website for lawful purposes only. You must not:</p>
+        <ul>
+          <li>Use our website in any way that breaches applicable laws or regulations</li>
+          <li>Use our website in any way that is fraudulent or harmful</li>
+          <li>Attempt to gain unauthorised access to our systems or networks</li>
+          <li>Transmit any harmful code, viruses, or malicious software</li>
+          <li>Collect or harvest any information from our website without permission</li>
+          <li>Interfere with the proper functioning of our website</li>
+        </ul>
+        
+        ${formData.hasAccounts === 'yes' ? `
+        <h2>4. User Accounts</h2>
+        <p>If you create an account on our website, you are responsible for:</p>
+        <ul>
+          <li>Maintaining the confidentiality of your account credentials</li>
+          <li>All activities that occur under your account</li>
+          <li>Notifying us immediately of any unauthorised use of your account</li>
+        </ul>
+        <p>We reserve the right to suspend or terminate accounts that violate these Terms or for any other reason at our discretion.</p>
+        ` : ''}
+        
+        ${formData.hasUgc === 'yes' ? `
+        <h2>${formData.hasAccounts === 'yes' ? '5' : '4'}. User Content</h2>
+        <p>If you submit content to our website (including comments, reviews, or uploads), you:</p>
+        <ul>
+          <li>Retain ownership of your content but grant us a licence to use, display, and distribute it</li>
+          <li>Confirm that your content does not infringe any third party's rights</li>
+          <li>Accept that we may remove content that violates these Terms or for any other reason</li>
+        </ul>
+        <p>You must not submit content that is unlawful, defamatory, threatening, abusive, obscene, or otherwise objectionable.</p>
+        ` : ''}
+        
+        <h2>${formData.hasAccounts === 'yes' && formData.hasUgc === 'yes' ? '6' : formData.hasAccounts === 'yes' || formData.hasUgc === 'yes' ? '5' : '4'}. Intellectual Property</h2>
+        <p>All content on our website, including text, images, logos, and software, is the property of ${formData.businessName} or our licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+        <p>You may not reproduce, distribute, or create derivative works from our content without our express written permission.</p>
+        
+        ${isEcommerce ? `
+        <h2>Orders and Payments</h2>
+        <p>All orders placed through our website are subject to acceptance. We reserve the right to refuse or cancel orders at our discretion.</p>
+        <p>Prices are displayed in GBP and include VAT where applicable. We reserve the right to change prices at any time without notice.</p>
+        <p>Payment must be made at the time of order using the payment methods available on our website.</p>
+        
+        <h2>Delivery</h2>
+        <p>We will deliver products to the address you provide. Delivery times are estimates only and we are not liable for delays beyond our control.</p>
+        <p>Risk of loss or damage passes to you upon delivery.</p>
+        
+        <h2>Returns and Refunds</h2>
+        <p>Under the Consumer Contracts Regulations 2013, you have 14 days from delivery to cancel your order for a full refund, except for certain items excluded by law.</p>
+        <p>To cancel, please contact us at ${formData.businessEmail}. You must return the goods in their original condition at your own cost.</p>
+        <p>We will process refunds within 14 days of receiving the returned goods.</p>
+        ` : ''}
+        
+        ${isSaas ? `
+        <h2>Subscription Services</h2>
+        <p>Access to our software or services may require a paid subscription. By subscribing, you agree to pay the applicable fees and authorise us to charge your payment method on a recurring basis.</p>
+        <p>You may cancel your subscription at any time. Cancellation will take effect at the end of your current billing period.</p>
+        <p>We reserve the right to modify pricing with reasonable notice. Continued use after price changes constitutes acceptance of the new pricing.</p>
+        ` : ''}
+        
+        <h2>Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law:</p>
+        <ul>
+          <li>We provide our website and services "as is" without warranties of any kind</li>
+          <li>We are not liable for any indirect, consequential, or incidental damages arising from your use of our website or services</li>
+          <li>Our total liability to you shall not exceed the amount you paid to us in the 12 months preceding the claim</li>
+        </ul>
+        <p>Nothing in these Terms excludes or limits our liability for death or personal injury caused by our negligence, fraud, or any liability that cannot be excluded by law.</p>
+        
+        <h2>Indemnification</h2>
+        <p>You agree to indemnify and hold harmless ${formData.businessName} and our officers, directors, employees, and agents from any claims, damages, or expenses arising from your breach of these Terms or your use of our website or services.</p>
+        
+        <h2>Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites. We are not responsible for the content or privacy practices of these websites and encourage you to review their terms and policies.</p>
+        
+        <h2>Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. Changes will be posted on this page with an updated revision date. Your continued use of our website after changes are posted constitutes acceptance of the revised Terms.</p>
+        
+        <h2>Governing Law and Disputes</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising from these Terms or your use of our website shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+        ${formData.customerType !== 'b2b' ? '<p>If you are a consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident.</p>' : ''}
+        
+        <h2>Severability</h2>
+        <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+        
+        <h2>Contact Us</h2>
+        <p>For any questions about these Terms, please contact:</p>
+        <p>
+          ${formData.businessName}<br>
+          ${formData.businessAddress.replace(/\n/g, '<br>')}<br>
+          Email: ${formData.businessEmail}
+        </p>
+      `;
+    }
+    
+    function generateCookiePolicy() {
+      const usesCookies = formData.useCookies !== 'no';
+      
+      return `
+        <h1>Cookie Policy</h1>
+        <p class="last-updated">Last updated: ${formData.date}</p>
+        
+        <h2>1. Introduction</h2>
+        <p>This Cookie Policy explains how ${formData.businessName} ("we", "us", or "our") uses cookies and similar technologies on our website ${formData.websiteUrl}.</p>
+        <p>By using our website, you consent to the use of cookies in accordance with this policy. You can manage your cookie preferences as described below.</p>
+        
+        <h2>2. What Are Cookies?</h2>
+        <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.</p>
+        <p>Cookies can be "persistent" (remaining on your device until deleted) or "session" cookies (deleted when you close your browser).</p>
+        
+        ${usesCookies ? `
+        <h2>3. Cookies We Use</h2>
+        <p>We use the following types of cookies on our website:</p>
+        
+        <h3>Essential Cookies</h3>
+        <p>These cookies are necessary for the website to function properly. They enable basic features like page navigation, secure access, and remembering your cookie preferences. You cannot opt out of these cookies as the website will not function correctly without them.</p>
+        <ul>
+          <li><strong>Cookie consent</strong> - Remembers your cookie preferences</li>
+          <li><strong>Session management</strong> - Maintains your session as you navigate the site</li>
+          ${formData.hasAccounts === 'yes' ? '<li><strong>Authentication</strong> - Keeps you logged into your account</li>' : ''}
+        </ul>
+        
+        ${formData.tpAnalytics ? `
+        <h3>Analytics Cookies</h3>
+        <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website and your experience.</p>
+        <ul>
+          <li><strong>Google Analytics</strong> - Collects information about how you use our site, including pages visited and time spent. Data is anonymised. <a href="https://policies.google.com/privacy">Google's Privacy Policy</a></li>
+        </ul>
+        ` : ''}
+        
+        ${formData.tpAds ? `
+        <h3>Marketing Cookies</h3>
+        <p>These cookies are used to track visitors across websites to display relevant advertisements. They remember that you visited our website and may share this information with advertising partners.</p>
+        <ul>
+          <li><strong>Google Ads</strong> - Delivers targeted advertising based on your interests</li>
+          <li><strong>Facebook Pixel</strong> - Tracks conversions and allows us to reach you with relevant ads on Facebook</li>
+        </ul>
+        ` : ''}
+        
+        ${formData.tpSocial ? `
+        <h3>Social Media Cookies</h3>
+        <p>These cookies are set by social media services we have integrated into the website, such as share buttons. They can track your activity across sites.</p>
+        ` : ''}
+        
+        ` : `
+        <h2>3. Our Cookie Usage</h2>
+        <p>Our website uses only essential cookies that are strictly necessary for the website to function. These cannot be disabled as the website would not work properly without them.</p>
+        `}
+        
+        <h2>4. Managing Cookies</h2>
+        <p>Most web browsers allow you to control cookies through their settings. You can:</p>
+        <ul>
+          <li>View what cookies are stored on your device</li>
+          <li>Delete all or specific cookies</li>
+          <li>Block all cookies or only third-party cookies</li>
+          <li>Set preferences for specific websites</li>
+        </ul>
+        <p>Here are links to manage cookies in popular browsers:</p>
+        <ul>
+          <li><a href="https://support.google.com/chrome/answer/95647">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac">Safari</a></li>
+          <li><a href="https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d">Microsoft Edge</a></li>
+        </ul>
+        <p>Please note that blocking cookies may affect the functionality of our website.</p>
+        
+        <h2>5. Third-Party Cookies</h2>
+        <p>Some cookies on our website are placed by third-party services. We do not control these cookies. Please refer to the privacy policies of these third parties for information about their cookies:</p>
+        <ul>
+          ${formData.tpAnalytics ? '<li><a href="https://policies.google.com/privacy">Google Analytics</a></li>' : ''}
+          ${formData.tpPayment ? '<li>Your payment provider (Stripe, PayPal, etc.)</li>' : ''}
+          ${formData.tpAds ? '<li><a href="https://policies.google.com/technologies/ads">Google Ads</a></li>' : ''}
+          ${formData.tpSocial ? '<li>Social media platforms (Facebook, Twitter, etc.)</li>' : ''}
+        </ul>
+        
+        <h2>6. Changes to This Policy</h2>
+        <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+        
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about our use of cookies, please contact us:</p>
+        <p>
+          ${formData.businessName}<br>
+          Email: ${formData.businessEmail}
+        </p>
+        
+        <h2>8. More Information</h2>
+        <p>For more information about cookies and your rights, visit the Information Commissioner's Office (ICO) website: <a href="https://ico.org.uk/for-the-public/online/cookies/">ico.org.uk/for-the-public/online/cookies</a></p>
+      `;
+    }
+  </script>
+</body>
+</html>
