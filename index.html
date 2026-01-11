@@ -1,68 +1,118 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UK Legal Docs - Privacy Policy & Terms Generator for UK Businesses</title>
-  <meta name="description" content="Generate GDPR-compliant Privacy Policies, Terms of Service, and Cookie Policies for your UK business. Lawyer-quality documents for £29.">
+  <meta name="description"
+    content="Generate GDPR-compliant Privacy Policies, Terms of Service, and Cookie Policies for your UK business. Lawyer-quality documents for £29.">
   <link rel="canonical" href="https://getlegaldocs.co.uk/">
   <meta property="og:title" content="UK Legal Docs - Privacy Policy & Terms Generator">
-  <meta property="og:description" content="Generate GDPR-compliant Privacy Policies, Terms of Service, and Cookie Policies for your UK business.">
+  <meta property="og:description"
+    content="Generate GDPR-compliant Privacy Policies, Terms of Service, and Cookie Policies for your UK business.">
   <meta property="og:url" content="https://getlegaldocs.co.uk/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap"
+    rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     :root {
-      /* New blue color palette */
-      --primary: #3B82F6;
-      --primary-dark: #2563EB;
-      --primary-light: #60A5FA;
-      --accent: #EF4444;
-      --accent-light: #F87171;
-      --bg: #FFFFFF;
-      --bg-alt: #F9FAFB;
-      /* Legacy colors (for gradual migration) */
-      --navy: #3B82F6;
-      --navy-light: #60A5FA;
-      --gold: #EF4444;
-      --gold-light: #F87171;
-      --cream: #F9FAFB;
-      --white: #ffffff;
-      --gray-100: #f5f5f5;
-      --gray-200: #e5e5e5;
-      --gray-400: #a3a3a3;
-      --gray-600: #525252;
-      --gray-800: #262626;
-      --red: #dc2626;
-      --green: #16a34a;
-      --font-serif: 'Source Serif 4', Georgia, serif;
-      --font-sans: 'Inter', -apple-system, sans-serif;
+      /* === BRAND PALETTE === */
+      --primary: #4F46E5;
+      /* Indigo 600 */
+      --primary-dark: #4338CA;
+      /* Indigo 700 */
+      --primary-light: #818CF8;
+      /* Indigo 400 */
+      --primary-soft: #EEF2FF;
+      /* Indigo 50 */
+
+      --accent: #0EA5E9;
+      /* Sky 500 */
+      --accent-dark: #0284C7;
+      /* Sky 600 */
+
+      /* === NEUTRALS === */
+      --bg-body: #F8FAFC;
+      /* Slate 50 */
+      --bg-surface: #FFFFFF;
+      /* White */
+      --bg-surface-alt: #F1F5F9;
+      /* Slate 100 */
+      --white: #FFFFFF;
+
+      --text-main: #0F172A;
+      /* Slate 900 */
+      --text-muted: #64748B;
+      /* Slate 500 */
+      --text-light: #94A3B8;
+      /* Slate 400 */
+
+      /* === UTILITY === */
+      --border-light: #E2E8F0;
+      /* Slate 200 */
+      --border-focus: #C7D2FE;
+      /* Indigo 200 */
+
+      --success: #10B981;
+      --error: #EF4444;
+
+      /* === TYPOGRAPHY === */
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      /* === SHADOWS & DEPTH === */
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --shadow-focus: 0 0 0 4px rgba(79, 70, 229, 0.15);
+      /* Indigo focus ring */
+
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      /* 12px */
+      --radius-lg: 1rem;
+      /* 16px */
+      --radius-full: 9999px;
     }
-    
-    html { scroll-behavior: smooth; }
-    
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: var(--font-sans);
-      background: var(--cream);
-      color: var(--gray-800);
+      font-family: var(--font-body);
+      background: var(--bg-body);
+      color: var(--text-main);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    
+
     /* ===== NAVIGATION ===== */
     .nav {
-      background: var(--white);
-      padding: 0.875rem 0;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid var(--gray-200);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.6);
     }
 
     .nav-inner {
@@ -138,9 +188,9 @@
     }
 
     .nav-links a {
-      color: var(--gray-600);
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 500;
       transition: color 0.2s;
     }
@@ -150,21 +200,21 @@
     }
 
     .nav-cta {
-      background: var(--accent);
-      color: var(--white);
+      background: var(--primary);
+      color: var(--bg-surface);
       padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      border-radius: var(--radius-md);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       transition: all 0.2s;
-      box-shadow: 0 2px 4px rgba(239, 68, 68, 0.25);
+      box-shadow: var(--shadow-md);
     }
 
     .nav-cta:hover {
-      background: var(--accent-light);
+      background: var(--primary-dark);
       transform: translateY(-1px);
-      box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+      box-shadow: var(--shadow-lg);
     }
 
     /* Mobile Menu */
@@ -284,8 +334,11 @@
 
     /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
-      padding: 5rem 1.5rem;
+      background:
+        radial-gradient(circle at 15% 50%, rgba(238, 242, 255, 0.8), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(224, 231, 255, 0.8), transparent 25%);
+      background-color: var(--bg-body);
+      padding: 8rem 1.5rem 8rem;
       position: relative;
       overflow: hidden;
     }
@@ -294,7 +347,7 @@
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 4rem;
       align-items: center;
     }
@@ -314,74 +367,87 @@
       width: 100%;
       max-width: 480px;
       height: auto;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
     }
 
     .hero-badge {
-      display: inline-block;
-      background: rgba(59, 130, 246, 0.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-surface);
       color: var(--primary);
       padding: 0.5rem 1rem;
-      border-radius: 50px;
+      border-radius: var(--radius-full);
       font-size: 0.875rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      font-weight: 500;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-light);
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
     }
 
     .hero h1 {
-      font-family: var(--font-sans);
-      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
       font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-      color: var(--gray-800);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
     }
 
     .hero h1 span {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       color: var(--primary);
     }
 
     .hero-sub {
-      font-size: 1.125rem;
-      max-width: 520px;
-      margin-bottom: 2rem;
-      color: var(--gray-600);
+      font-size: 1.25rem;
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      line-height: 1.6;
     }
 
     .hero-cta-group {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 3rem;
+      /* Increased from 2rem */
     }
 
     .hero-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: var(--accent);
-      color: var(--white);
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1.1rem;
+      gap: 0.75rem;
+      background: var(--text-main);
+      color: var(--bg-surface);
+      padding: 1rem 2.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 1.125rem;
       text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: var(--shadow-lg);
       border: none;
       cursor: pointer;
     }
 
     .hero-btn:hover {
-      background: var(--accent-light);
+      background: #000;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+      box-shadow: var(--shadow-xl);
     }
 
     .hero-price-tag {
       display: flex;
       flex-direction: column;
     }
+
 
     .hero-price-tag .amount {
       font-size: 1.5rem;
@@ -406,35 +472,43 @@
         grid-template-columns: 1fr;
         text-align: center;
       }
+
       .hero-content {
         text-align: center;
       }
+
       .hero h1 {
         font-size: 1.75rem;
       }
+
       .hero h1 span {
         display: block;
       }
+
       .hero-sub {
         margin-left: auto;
         margin-right: auto;
       }
+
       .hero-cta-group {
         justify-content: center;
         flex-wrap: wrap;
       }
+
       .hero-illustration {
         order: -1;
       }
+
       .hero-svg {
         max-width: 320px;
       }
     }
-    
+
     /* ===== TRUST BAR ===== */
     .trust-bar {
-      background: var(--bg-alt);
+      background: var(--bg-surface-alt);
       padding: 4rem 1.5rem;
+      border-top: 1px solid var(--border-light);
     }
 
     .trust-inner {
@@ -446,28 +520,32 @@
     }
 
     .trust-item {
-      background: var(--white);
-      border-radius: 12px;
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
       padding: 1.5rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: all 0.2s ease;
     }
 
     .trust-item:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
     }
 
     .trust-icon {
       width: 56px;
       height: 56px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      border-radius: 12px;
+      /* Soft Indigo Background */
+      background: var(--primary-soft);
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1rem;
+      margin: 0 auto 1.25rem;
+      color: var(--primary);
     }
 
     .trust-icon svg {
@@ -501,37 +579,42 @@
       .trust-inner {
         grid-template-columns: 1fr;
       }
+
       .trust-item {
         padding: 1.25rem;
       }
     }
-    
+
     /* ===== WHAT YOU GET ===== */
     .features {
-      padding: 6rem 1.5rem;
-      background: var(--white);
+      padding: 8rem 1.5rem;
+      background: var(--bg-surface);
     }
 
-    .container { max-width: 1100px; margin: 0 auto; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
     .section-title {
       font-family: var(--font-heading);
-      font-size: 2.25rem;
+      font-size: 2.5rem;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 1rem;
-      color: var(--gray-900);
+      margin-bottom: 1.5rem;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
     }
 
     .section-sub {
       text-align: center;
-      color: var(--gray-600);
-      margin-bottom: 3.5rem;
+      color: var(--text-muted);
+      margin-bottom: 5rem;
       max-width: 640px;
       margin-left: auto;
       margin-right: auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
+      font-size: 1.125rem;
+      line-height: 1.7;
     }
 
     .features-grid {
@@ -549,29 +632,31 @@
     }
 
     .feature-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .feature-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-light);
     }
 
     .feature-icon {
       width: 56px;
       height: 56px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      border-radius: 14px;
+      background: var(--primary);
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.25rem;
-      color: var(--white);
+      margin-bottom: 1.5rem;
+      color: var(--bg-surface);
+      box-shadow: var(--shadow-md);
     }
 
     .feature-icon svg {
@@ -581,23 +666,25 @@
 
     .feature-card h3 {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      color: var(--gray-900);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-main);
     }
 
     .feature-card p {
-      font-size: 0.95rem;
-      color: var(--gray-600);
+      font-size: 1rem;
+      color: var(--text-muted);
       line-height: 1.6;
       margin: 0;
     }
 
     /* ===== USE CASES ===== */
     .use-cases {
-      padding: 6rem 1.5rem;
-      background: var(--bg-alt);
+      padding: 8rem 1.5rem;
+      background: var(--bg-surface-alt);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
     }
 
     .use-cases-grid {
@@ -619,56 +706,57 @@
     }
 
     .use-case-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 2rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+      border: 1px solid var(--border-light);
     }
 
     .use-case-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
     }
 
     .use-case-icon {
       width: 64px;
       height: 64px;
-      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-      border-radius: 16px;
+      background: var(--primary-soft);
+      border-radius: var(--radius-lg);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.25rem;
+      margin: 0 auto 1.5rem;
+      color: var(--primary);
     }
 
     .use-case-icon svg {
       width: 32px;
       height: 32px;
-      color: var(--white);
     }
 
     .use-case-card h3 {
       font-family: var(--font-heading);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--gray-900);
-      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0 0 0.75rem;
     }
 
     .use-case-card p {
-      font-size: 0.9rem;
-      color: var(--gray-600);
+      font-size: 0.95rem;
+      color: var(--text-muted);
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     /* ===== HOW IT WORKS ===== */
     .how-it-works {
-      padding: 6rem 1.5rem;
-      background: var(--bg-alt);
+      padding: 8rem 1.5rem;
+      background: var(--bg-surface);
     }
 
     .steps {
@@ -676,7 +764,7 @@
       justify-content: center;
       align-items: flex-start;
       gap: 0;
-      margin-top: 3rem;
+      margin-top: 4rem;
       position: relative;
     }
 
@@ -688,8 +776,8 @@
       transform: translateX(-50%);
       width: calc(100% - 200px);
       max-width: 800px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary-light) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      height: 2px;
+      background: var(--border-light);
       z-index: 0;
     }
 
@@ -705,8 +793,8 @@
     .step-num {
       width: 64px;
       height: 64px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: var(--white);
+      background: var(--primary);
+      color: var(--bg-surface);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -714,23 +802,22 @@
       font-family: var(--font-heading);
       font-size: 1.5rem;
       font-weight: 700;
-      margin: 0 auto 1.25rem;
-      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
-      border: 4px solid var(--white);
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 0 0 8px var(--bg-surface);
     }
 
     .step h3 {
       font-family: var(--font-heading);
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--gray-900);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
     }
 
     .step p {
-      font-size: 0.9rem;
-      color: var(--gray-600);
-      line-height: 1.5;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
 
     @media (max-width: 900px) {
@@ -756,11 +843,11 @@
         text-align: center;
       }
     }
-    
+
     /* ===== FAQ ===== */
     .faq {
-      padding: 6rem 1.5rem;
-      background: var(--white);
+      padding: 8rem 1.5rem;
+      background: var(--bg-surface);
     }
 
     .faq-list {
@@ -769,12 +856,12 @@
     }
 
     .faq-item {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
       margin-bottom: 1rem;
       overflow: hidden;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     .faq-item:hover {
@@ -782,20 +869,22 @@
     }
 
     .faq-item.open {
-      border-left: 4px solid var(--primary);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
     }
 
     .faq-q {
       font-weight: 600;
-      color: var(--gray-800);
+      color: var(--text-main);
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.25rem 1.5rem;
+      padding: 1.5rem;
       user-select: none;
       transition: color 0.2s ease;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
     }
 
     .faq-q:hover {
@@ -804,11 +893,12 @@
 
     .faq-item.open .faq-q {
       color: var(--primary);
+      padding-bottom: 0.5rem;
     }
 
     .faq-a {
-      color: var(--gray-600);
-      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-size: 1rem;
       line-height: 1.7;
       padding: 0 1.5rem;
       max-height: 0;
@@ -818,27 +908,27 @@
 
     .faq-item.open .faq-a {
       max-height: 500px;
-      padding: 0 1.5rem 1.25rem;
+      padding: 0 1.5rem 1.5rem;
     }
 
     .faq-chevron {
       transition: transform 0.3s ease;
       flex-shrink: 0;
       margin-left: 1rem;
-      color: var(--gray-400);
+      color: var(--text-light);
     }
 
     .faq-item.open .faq-chevron {
       transform: rotate(180deg);
       color: var(--primary);
     }
-    
+
     /* ===== CTA ===== */
     .cta-section {
       padding: 6rem 1.5rem;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #1E3A8A 100%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       text-align: center;
-      color: var(--white);
+      color: var(--bg-surface);
       position: relative;
       overflow: hidden;
     }
@@ -846,12 +936,12 @@
     .cta-section::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      opacity: 0.5;
+      top: -50%;
+      left: -50%;
+      right: -50%;
+      bottom: -50%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+      z-index: 0;
     }
 
     .cta-section .container {
@@ -860,10 +950,11 @@
     }
 
     .cta-section h2 {
-      font-family: var(--font-sans);
+      font-family: var(--font-heading);
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-weight: 700;
+      color: var(--white);
     }
 
     .cta-section p {
@@ -874,29 +965,31 @@
       margin-right: auto;
       font-size: 1.125rem;
       line-height: 1.7;
+      color: var(--white);
     }
 
     .btn-cta {
       display: inline-flex;
       align-items: center;
       gap: 0.75rem;
-      background: var(--accent);
-      color: var(--white);
+      background: var(--bg-surface);
+      color: var(--primary);
       padding: 1.125rem 2.5rem;
-      border-radius: 10px;
+      border-radius: var(--radius-md);
       text-decoration: none;
       font-weight: 700;
       font-size: 1.125rem;
-      transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35);
+      box-shadow: var(--shadow-lg);
     }
 
     .btn-cta:hover {
-      background: #DC2626;
+      background: var(--bg-surface);
       transform: translateY(-3px);
-      box-shadow: 0 6px 24px rgba(239, 68, 68, 0.45);
+      box-shadow: var(--shadow-xl);
+      color: var(--primary-dark);
     }
 
     .btn-cta svg {
@@ -906,12 +999,15 @@
     .btn-cta:hover svg {
       transform: translateX(3px);
     }
-    
+
     /* ===== FOOTER ===== */
     .footer {
-      background: var(--gray-900);
-      color: var(--gray-300);
-      padding: 4rem 1.5rem 2rem;
+      background: var(--text-main);
+      /* Dark Slate 900 */
+      color: var(--text-light);
+      /* Slate 400 */
+      padding: 6rem 1.5rem 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .footer-inner {
@@ -1064,43 +1160,47 @@
         align-items: center;
       }
     }
-    
+
     /* ===== APP SECTION ===== */
     .app-section {
       display: none;
       padding: 3rem 1.5rem;
-      padding-top: 4rem;
+      padding-top: 6rem;
       min-height: 100vh;
-      background: var(--bg-alt);
+      background: var(--bg-surface-alt);
     }
 
-    .app-section.active { display: block; }
+    .app-section.active {
+      display: block;
+    }
 
     .app-container {
       max-width: 720px;
       margin: 0 auto;
-      background: var(--white);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-light);
       overflow: hidden;
     }
 
     .app-header {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: var(--white);
-      padding: 2rem 2rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 2rem 2.5rem;
     }
 
     .app-header h2 {
-      font-family: var(--font-sans);
+      font-family: var(--font-heading);
       font-size: 1.5rem;
       font-weight: 700;
+      color: var(--text-main);
     }
 
     .app-header p {
-      font-size: 0.9rem;
-      margin-top: 0.35rem;
-      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      color: var(--text-muted);
     }
 
     /* Form step visibility - show only active step */
@@ -1113,33 +1213,37 @@
     }
 
     .app-progress {
-      background: var(--white);
-      padding: 1.25rem 2rem;
-      border-bottom: 1px solid var(--gray-200);
+      background: var(--bg-surface-alt);
+      padding: 1.5rem 2.5rem;
+      border-bottom: 1px solid var(--border-light);
     }
 
     .progress-bar {
-      height: 10px;
-      background: var(--gray-100);
-      border-radius: 5px;
+      height: 8px;
+      background: var(--border-light);
+      border-radius: var(--radius-full);
       overflow: hidden;
     }
 
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-      transition: width 0.3s ease;
-      border-radius: 5px;
+      background: var(--primary);
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: var(--radius-full);
+      box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
     }
 
     .progress-text {
-      font-size: 0.8rem;
-      color: var(--gray-500);
-      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
       font-weight: 500;
+      text-align: right;
     }
 
-    .app-body { padding: 2rem; }
+    .app-body {
+      padding: 2.5rem;
+    }
 
     .form-group {
       margin-bottom: 1.75rem;
@@ -1149,13 +1253,14 @@
       display: block;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: var(--gray-800);
+      color: var(--text-main);
+      font-size: 0.95rem;
     }
 
     .form-group .helper {
       font-size: 0.85rem;
-      color: var(--gray-500);
-      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
     }
 
     .form-group input[type="text"],
@@ -1165,53 +1270,57 @@
     .form-group select {
       width: 100%;
       padding: 0.875rem 1rem;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 10px;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
       font-size: 1rem;
-      background: var(--white);
+      background: var(--bg-surface);
       font-family: inherit;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
     }
-    
+
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+      box-shadow: var(--shadow-focus);
     }
-    
+
     .checkbox-group {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
     }
-    
+
     .checkbox-item {
       display: flex;
       align-items: flex-start;
       gap: 0.75rem;
     }
-    
+
     .checkbox-item input[type="checkbox"] {
       width: 20px;
       height: 20px;
       margin-top: 2px;
       accent-color: var(--primary);
     }
-    
-    .checkbox-item span { font-size: 0.95rem; }
-    
+
+    .checkbox-item span {
+      font-size: 0.95rem;
+    }
+
     .btn-nav {
       display: flex;
       gap: 1rem;
       margin-top: 2rem;
     }
-    
+
     .btn {
       flex: 1;
-      padding: 0.875rem 1.5rem;
-      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
@@ -1219,40 +1328,52 @@
       border: none;
       font-family: inherit;
     }
-    
+
     .btn-secondary {
-      background: var(--gray-100);
-      color: var(--gray-800);
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
     }
-    
-    .btn-secondary:hover { background: var(--gray-200); }
-    
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-alt);
+      border-color: var(--border-focus);
+    }
+
     .btn-primary {
       background: var(--primary);
-      color: var(--white);
-      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+      color: var(--bg-surface);
+      box-shadow: var(--shadow-md);
     }
 
     .btn-primary:hover {
       background: var(--primary-dark);
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-1px);
     }
 
     .btn-gold {
       background: var(--accent);
-      color: var(--white);
-      box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+      color: var(--bg-surface);
+      box-shadow: var(--shadow-md);
     }
 
     .btn-gold:hover {
-      background: #DC2626;
-      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.35);
+      background: var(--accent-dark);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-1px);
     }
-    
+
     /* ===== OUTPUT ===== */
-    .output-section { display: none; }
-    .output-section.active { display: block; }
-    
+    .output-section {
+      display: none;
+    }
+
+    .output-section.active {
+      display: block;
+    }
+
     .document-tabs {
       display: flex;
       gap: 0.5rem;
@@ -1260,7 +1381,7 @@
       padding: 0 2rem;
       background: var(--gray-100);
     }
-    
+
     .doc-tab {
       padding: 1rem 1.5rem;
       background: none;
@@ -1272,11 +1393,11 @@
       font-family: inherit;
       font-size: 0.9rem;
     }
-    
+
     .doc-tab.active {
       color: var(--navy);
     }
-    
+
     .doc-tab.active::after {
       content: '';
       position: absolute;
@@ -1286,7 +1407,7 @@
       height: 2px;
       background: var(--navy);
     }
-    
+
     .document-output {
       padding: 2rem;
       background: var(--white);
@@ -1294,36 +1415,40 @@
       font-size: 0.9rem;
       line-height: 1.7;
     }
-    
+
     .document-output h1 {
       font-family: var(--font-sans);
       font-size: 1.75rem;
       color: var(--navy);
       margin-bottom: 0.5rem;
     }
-    
+
     .document-output .last-updated {
       color: var(--gray-600);
       margin-bottom: 2rem;
       font-size: 0.85rem;
     }
-    
+
     .document-output h2 {
       font-size: 1.2rem;
       color: var(--navy);
       margin-top: 2rem;
       margin-bottom: 0.75rem;
     }
-    
-    .document-output p { margin-bottom: 1rem; }
-    
+
+    .document-output p {
+      margin-bottom: 1rem;
+    }
+
     .document-output ul {
       margin-bottom: 1rem;
       padding-left: 1.5rem;
     }
-    
-    .document-output li { margin-bottom: 0.5rem; }
-    
+
+    .document-output li {
+      margin-bottom: 0.5rem;
+    }
+
     .download-bar {
       display: flex;
       gap: 1rem;
@@ -1331,24 +1456,33 @@
       background: var(--gray-100);
       border-top: 1px solid var(--gray-200);
     }
-    
-    .download-bar .btn { flex: none; }
-    
+
+    .download-bar .btn {
+      flex: none;
+    }
+
     /* ===== LANDING HIDE WHEN APP ACTIVE ===== */
-    body.app-mode .landing-content { display: none; }
-    body.app-mode .app-section { display: block; }
-    
+    body.app-mode .landing-content {
+      display: none;
+    }
+
+    body.app-mode .app-section {
+      display: block;
+    }
+
     /* ===== GUARANTEE BADGE ===== */
     .guarantee {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 0.95rem;
       margin-top: 1rem;
     }
 
-    .guarantee svg { color: var(--gold); }
+    .guarantee svg {
+      color: var(--gold);
+    }
 
     /* ===== HERO LINKS ===== */
     .hero-links {
@@ -1359,13 +1493,15 @@
     }
 
     .hero-link {
-      color: rgba(255,255,255,0.85);
+      color: rgba(255, 255, 255, 0.85);
       text-decoration: underline;
       font-size: 0.9rem;
       transition: color 0.2s;
     }
 
-    .hero-link:hover { color: var(--gold); }
+    .hero-link:hover {
+      color: var(--gold);
+    }
 
     /* ===== TESTIMONIALS ===== */
     .testimonials {
@@ -1493,10 +1629,11 @@
       border-collapse: separate;
       border-spacing: 0;
       margin-top: 3rem;
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      /* overflow: hidden; Removed to allow badge pop-out */
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-light);
     }
 
     .comparison-table th,
@@ -1517,10 +1654,11 @@
     .comparison-table th:first-child {
       text-align: left;
       padding-left: 1.5rem;
+      border-top-left-radius: var(--radius-lg);
     }
 
     .comparison-table th:last-child {
-      border-radius: 0;
+      border-top-right-radius: var(--radius-lg);
     }
 
     .comparison-table td:first-child {
@@ -1532,6 +1670,14 @@
 
     .comparison-table tr:last-child td {
       border-bottom: none;
+    }
+
+    .comparison-table tr:last-child td:first-child {
+      border-bottom-left-radius: var(--radius-lg);
+    }
+
+    .comparison-table tr:last-child td:last-child {
+      border-bottom-right-radius: var(--radius-lg);
     }
 
     .comparison-table tbody tr {
@@ -1574,6 +1720,7 @@
       color: var(--green);
       font-size: 1.25rem;
     }
+
     .comparison-table .cross {
       color: var(--gray-400);
       opacity: 0.7;
@@ -1590,15 +1737,24 @@
       animation: slideUp 0.3s ease;
     }
 
-    .sticky-cta.visible { display: block; }
+    .sticky-cta.visible {
+      display: block;
+    }
 
     @keyframes slideUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     .sticky-cta .btn-cta {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     }
 
     /* ===== FAQ ACCORDION ===== */
@@ -1609,7 +1765,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 1000;
       display: none;
       align-items: center;
@@ -1617,7 +1773,9 @@
       padding: 1rem;
     }
 
-    .sample-modal.open { display: flex; }
+    .sample-modal.open {
+      display: flex;
+    }
 
     .sample-modal-content {
       background: var(--white);
@@ -1655,7 +1813,9 @@
       transition: background 0.2s;
     }
 
-    .sample-modal-close:hover { background: var(--gray-100); }
+    .sample-modal-close:hover {
+      background: var(--gray-100);
+    }
 
     .sample-note {
       color: var(--gray-600);
@@ -1686,14 +1846,18 @@
       font-size: 1rem;
     }
 
-    .sample-doc p { margin-bottom: 0.75rem; }
+    .sample-doc p {
+      margin-bottom: 0.75rem;
+    }
 
     .sample-doc ul {
       margin-left: 1.5rem;
       margin-bottom: 0.75rem;
     }
 
-    .sample-doc li { margin-bottom: 0.25rem; }
+    .sample-doc li {
+      margin-bottom: 0.25rem;
+    }
 
     /* ===== MODAL (existing) ===== */
     .modal-overlay {
@@ -1702,7 +1866,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 1000;
       display: none;
       align-items: center;
@@ -1710,7 +1874,9 @@
       padding: 1rem;
     }
 
-    .modal-overlay.active { display: flex; }
+    .modal-overlay.active {
+      display: flex;
+    }
 
     .modal {
       background: var(--white);
@@ -1760,9 +1926,14 @@
       margin-bottom: 0.75rem;
     }
 
-    .modal-body h4:first-child { margin-top: 0; }
+    .modal-body h4:first-child {
+      margin-top: 0;
+    }
 
-    .modal-body p { margin-bottom: 1rem; color: var(--gray-600); }
+    .modal-body p {
+      margin-bottom: 1rem;
+      color: var(--gray-600);
+    }
 
     .modal-footer {
       padding: 1.5rem 2rem;
@@ -1778,35 +1949,87 @@
       gap: 1rem;
       margin-top: 1rem;
       font-size: 0.85rem;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
     }
 
-    .payment-trust svg { opacity: 0.7; }
+    .payment-trust svg {
+      opacity: 0.7;
+    }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 640px) {
-      .nav { padding: 0.75rem 0; }
-      .nav-inner { padding: 0 1rem; }
-      .logo { gap: 0.5rem; }
-      .logo-icon { width: 32px; height: 32px; }
-      .logo-text .brand { font-size: 1rem; }
-      .hero { padding: 3rem 1.5rem; }
-      .features, .how-it-works, .faq, .cta-section, .testimonials, .comparison { padding: 3rem 1rem; }
-      .document-tabs { padding: 0 1rem; overflow-x: auto; }
-      .doc-tab { padding: 0.75rem 1rem; white-space: nowrap; }
-      .download-bar { flex-direction: column; }
+      .nav {
+        padding: 0.75rem 0;
+      }
+
+      .nav-inner {
+        padding: 0 1rem;
+      }
+
+      .logo {
+        gap: 0.5rem;
+      }
+
+      .logo-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .logo-text .brand {
+        font-size: 1rem;
+      }
+
+      .hero {
+        padding: 3rem 1.5rem;
+      }
+
+      .features,
+      .how-it-works,
+      .faq,
+      .cta-section,
+      .testimonials,
+      .comparison {
+        padding: 3rem 1rem;
+      }
+
+      .document-tabs {
+        padding: 0 1rem;
+        overflow-x: auto;
+      }
+
+      .doc-tab {
+        padding: 0.75rem 1rem;
+        white-space: nowrap;
+      }
+
+      .download-bar {
+        flex-direction: column;
+      }
+
       .sticky-cta {
         right: 10px;
         left: 10px;
         bottom: 10px;
       }
+
       .sticky-cta .btn-cta {
         width: 100%;
         justify-content: center;
       }
-      .comparison-table { font-size: 0.85rem; }
-      .comparison-table th, .comparison-table td { padding: 0.75rem 0.5rem; }
-      .hero-links { flex-direction: column; gap: 0.75rem; }
+
+      .comparison-table {
+        font-size: 0.85rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem 0.5rem;
+      }
+
+      .hero-links {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
     }
 
     /* Payment Loading Overlay */
@@ -1824,24 +2047,30 @@
       justify-content: center;
       color: white;
     }
+
     .payment-loading-spinner {
       width: 50px;
       height: 50px;
-      border: 4px solid rgba(255,255,255,0.2);
+      border: 4px solid rgba(255, 255, 255, 0.2);
       border-top-color: #c9a227;
       border-radius: 50%;
       animation: spin 1s linear infinite;
       margin-bottom: 1.5rem;
     }
+
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
+
     .payment-loading-text {
       font-size: 1.25rem;
       font-family: var(--font-sans);
     }
   </style>
 </head>
+
 <body>
   <!-- Payment Loading Overlay -->
   <div id="paymentLoadingOverlay" class="payment-loading-overlay">
@@ -1895,11 +2124,14 @@
         <div class="hero-content">
           <div class="hero-badge">🇬🇧 Updated for 2025 UK Regulations</div>
           <h1>Legal Documents for Your UK Website — <span>Done in 5 Minutes</span></h1>
-          <p class="hero-sub">Answer 5 simple questions. Get all three legal documents your UK website needs — professionally written, GDPR-compliant, and ready to publish.</p>
+          <p class="hero-sub">Answer 5 simple questions. Get all three legal documents your UK website needs —
+            professionally written, GDPR-compliant, and ready to publish.</p>
           <div class="hero-cta-group">
             <button class="hero-btn" onclick="startApp()">
               Get All 3 Documents
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </button>
             <div class="hero-price-tag" id="pricing">
               <span class="compare">Lawyers charge £500+</span>
@@ -1908,7 +2140,11 @@
           </div>
           <p class="hero-note">✓ Instant download • ✓ No subscription • ✓ Free updates for life</p>
           <p class="hero-note" style="margin-top: 0.5rem;">
-            <svg width="16" height="16" fill="none" stroke="var(--primary)" stroke-width="2" viewBox="0 0 24 24" style="vertical-align: middle;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <svg width="16" height="16" fill="none" stroke="var(--primary)" stroke-width="2" viewBox="0 0 24 24"
+              style="vertical-align: middle;">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <polyline points="9 12 11 14 15 10" />
+            </svg>
             30-Day Money-Back Guarantee
           </p>
           <div class="hero-links" style="margin-top: 1.5rem; justify-content: flex-start;">
@@ -1919,47 +2155,50 @@
           <!-- SVG Document Illustration -->
           <svg class="hero-svg" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Background shapes -->
-            <circle cx="200" cy="175" r="140" fill="#EFF6FF" opacity="0.5"/>
-            <circle cx="320" cy="80" r="40" fill="#DBEAFE" opacity="0.6"/>
-            <circle cx="80" cy="280" r="30" fill="#DBEAFE" opacity="0.6"/>
+            <circle cx="200" cy="175" r="140" fill="#EFF6FF" opacity="0.5" />
+            <circle cx="320" cy="80" r="40" fill="#DBEAFE" opacity="0.6" />
+            <circle cx="80" cy="280" r="30" fill="#DBEAFE" opacity="0.6" />
 
             <!-- Document 1 (back) -->
-            <rect x="100" y="60" width="180" height="220" rx="8" fill="#FEF2F2" stroke="#FECACA" stroke-width="2"/>
-            <rect x="120" y="90" width="100" height="8" rx="4" fill="#FCA5A5"/>
-            <rect x="120" y="110" width="140" height="6" rx="3" fill="#FED7D7"/>
-            <rect x="120" y="125" width="130" height="6" rx="3" fill="#FED7D7"/>
-            <rect x="120" y="140" width="120" height="6" rx="3" fill="#FED7D7"/>
+            <rect x="100" y="60" width="180" height="220" rx="8" fill="#FEF2F2" stroke="#FECACA" stroke-width="2" />
+            <rect x="120" y="90" width="100" height="8" rx="4" fill="#FCA5A5" />
+            <rect x="120" y="110" width="140" height="6" rx="3" fill="#FED7D7" />
+            <rect x="120" y="125" width="130" height="6" rx="3" fill="#FED7D7" />
+            <rect x="120" y="140" width="120" height="6" rx="3" fill="#FED7D7" />
 
             <!-- Document 2 (middle) -->
-            <rect x="130" y="45" width="180" height="220" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="2"/>
-            <rect x="150" y="75" width="100" height="8" rx="4" fill="#6EE7B7"/>
-            <rect x="150" y="95" width="140" height="6" rx="3" fill="#D1FAE5"/>
-            <rect x="150" y="110" width="130" height="6" rx="3" fill="#D1FAE5"/>
-            <rect x="150" y="125" width="120" height="6" rx="3" fill="#D1FAE5"/>
+            <rect x="130" y="45" width="180" height="220" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="2" />
+            <rect x="150" y="75" width="100" height="8" rx="4" fill="#6EE7B7" />
+            <rect x="150" y="95" width="140" height="6" rx="3" fill="#D1FAE5" />
+            <rect x="150" y="110" width="130" height="6" rx="3" fill="#D1FAE5" />
+            <rect x="150" y="125" width="120" height="6" rx="3" fill="#D1FAE5" />
 
             <!-- Document 3 (front - main) -->
-            <rect x="160" y="30" width="180" height="220" rx="8" fill="white" stroke="#3B82F6" stroke-width="2" filter="drop-shadow(0 10px 20px rgba(59, 130, 246, 0.15))"/>
-            <rect x="180" y="60" width="100" height="10" rx="5" fill="#3B82F6"/>
-            <rect x="180" y="82" width="140" height="6" rx="3" fill="#E5E7EB"/>
-            <rect x="180" y="96" width="130" height="6" rx="3" fill="#E5E7EB"/>
-            <rect x="180" y="110" width="120" height="6" rx="3" fill="#E5E7EB"/>
-            <rect x="180" y="130" width="80" height="6" rx="3" fill="#E5E7EB"/>
-            <rect x="180" y="150" width="140" height="6" rx="3" fill="#E5E7EB"/>
-            <rect x="180" y="164" width="100" height="6" rx="3" fill="#E5E7EB"/>
-            <rect x="180" y="184" width="140" height="6" rx="3" fill="#E5E7EB"/>
-            <rect x="180" y="198" width="110" height="6" rx="3" fill="#E5E7EB"/>
+            <rect x="160" y="30" width="180" height="220" rx="8" fill="white" stroke="#3B82F6" stroke-width="2"
+              filter="drop-shadow(0 10px 20px rgba(59, 130, 246, 0.15))" />
+            <rect x="180" y="60" width="100" height="10" rx="5" fill="#3B82F6" />
+            <rect x="180" y="82" width="140" height="6" rx="3" fill="#E5E7EB" />
+            <rect x="180" y="96" width="130" height="6" rx="3" fill="#E5E7EB" />
+            <rect x="180" y="110" width="120" height="6" rx="3" fill="#E5E7EB" />
+            <rect x="180" y="130" width="80" height="6" rx="3" fill="#E5E7EB" />
+            <rect x="180" y="150" width="140" height="6" rx="3" fill="#E5E7EB" />
+            <rect x="180" y="164" width="100" height="6" rx="3" fill="#E5E7EB" />
+            <rect x="180" y="184" width="140" height="6" rx="3" fill="#E5E7EB" />
+            <rect x="180" y="198" width="110" height="6" rx="3" fill="#E5E7EB" />
 
             <!-- Shield icon -->
             <g transform="translate(280, 180)">
-              <circle cx="30" cy="30" r="28" fill="#3B82F6"/>
-              <path d="M30 16 L30 16 L18 20 L18 30 C18 38 23 44 30 48 C37 44 42 38 42 30 L42 20 L30 16Z" fill="white"/>
-              <polyline points="25 30 28 33 35 26" stroke="#3B82F6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="30" cy="30" r="28" fill="#3B82F6" />
+              <path d="M30 16 L30 16 L18 20 L18 30 C18 38 23 44 30 48 C37 44 42 38 42 30 L42 20 L30 16Z" fill="white" />
+              <polyline points="25 30 28 33 35 26" stroke="#3B82F6" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" />
             </g>
 
             <!-- Checkmark badges -->
             <g transform="translate(90, 190)">
-              <circle cx="15" cy="15" r="14" fill="#10B981"/>
-              <polyline points="9 15 13 19 21 11" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="15" cy="15" r="14" fill="#10B981" />
+              <polyline points="9 15 13 19 21 11" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
             </g>
           </svg>
         </div>
@@ -1972,7 +2211,9 @@
         <div class="trust-item">
           <div class="trust-icon">
             <!-- Shield icon for GDPR -->
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
           </div>
           <h4>UK GDPR Compliant</h4>
           <p>Documents meet all UK General Data Protection Regulation requirements</p>
@@ -1980,7 +2221,10 @@
         <div class="trust-item">
           <div class="trust-icon">
             <!-- Building icon for ICO -->
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1"/><path d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1" />
+              <path d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
+            </svg>
           </div>
           <h4>ICO Guidance</h4>
           <p>Based on official Information Commissioner's Office recommendations</p>
@@ -1988,7 +2232,14 @@
         <div class="trust-item">
           <div class="trust-icon">
             <!-- Cookie icon for PECR -->
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="9" r="1" fill="currentColor"/><circle cx="15" cy="8" r="1" fill="currentColor"/><circle cx="10" cy="14" r="1" fill="currentColor"/><circle cx="16" cy="13" r="1" fill="currentColor"/><circle cx="13" cy="17" r="1" fill="currentColor"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="8" cy="9" r="1" fill="currentColor" />
+              <circle cx="15" cy="8" r="1" fill="currentColor" />
+              <circle cx="10" cy="14" r="1" fill="currentColor" />
+              <circle cx="16" cy="13" r="1" fill="currentColor" />
+              <circle cx="13" cy="17" r="1" fill="currentColor" />
+            </svg>
           </div>
           <h4>PECR Compliant</h4>
           <p>Privacy and Electronic Communications Regulations covered</p>
@@ -1996,7 +2247,10 @@
         <div class="trust-item">
           <div class="trust-icon">
             <!-- Refresh icon for Updates -->
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M23 4v6h-6M1 20v-6h6" />
+              <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" />
+            </svg>
           </div>
           <h4>Always Updated</h4>
           <p>Templates updated when UK data protection laws change</p>
@@ -2008,28 +2262,39 @@
     <section class="features">
       <div class="container">
         <h2 class="section-title">Three Documents. One Price. Zero Legal Headaches.</h2>
-        <p class="section-sub">Everything your UK website needs to be compliant, professionally written and tailored to your business.</p>
+        <p class="section-sub">Everything your UK website needs to be compliant, professionally written and tailored to
+          your business.</p>
 
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
             </div>
             <h3>Privacy Policy</h3>
-            <p>Comprehensive GDPR-compliant privacy policy covering data collection, storage, third-party sharing, user rights, and more.</p>
+            <p>Comprehensive GDPR-compliant privacy policy covering data collection, storage, third-party sharing, user
+              rights, and more.</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+              </svg>
             </div>
             <h3>Terms of Service</h3>
-            <p>Protect your business with clear terms covering liability, intellectual property, user conduct, and dispute resolution.</p>
+            <p>Protect your business with clear terms covering liability, intellectual property, user conduct, and
+              dispute resolution.</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12h8M12 8v8" />
+              </svg>
             </div>
             <h3>Cookie Policy</h3>
             <p>PECR-compliant cookie policy explaining what cookies you use, why, and how users can control them.</p>
@@ -2047,7 +2312,11 @@
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
             </div>
             <h3>Instant Download</h3>
             <p>Get your documents as formatted Word files ready to add to your website. Copy, paste, done.</p>
@@ -2055,7 +2324,12 @@
 
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
             </div>
             <h3>Tailored to You</h3>
             <p>Answer simple questions about your business and get documents customised to exactly what you do.</p>
@@ -2063,7 +2337,10 @@
 
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
             </div>
             <h3>Always Up-to-Date</h3>
             <p>When UK data protection law changes, regenerate your documents for free. Forever.</p>
@@ -2076,13 +2353,18 @@
     <section class="use-cases" id="features">
       <div class="container">
         <h2 class="section-title">Perfect For Any UK Business</h2>
-        <p class="section-sub">Whether you're just starting out or running an established business, we've got you covered.</p>
+        <p class="section-sub">Whether you're just starting out or running an established business, we've got you
+          covered.</p>
 
         <div class="use-cases-grid">
           <div class="use-case-card">
             <div class="use-case-icon">
               <!-- Globe icon -->
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg>
             </div>
             <h3>Websites & Blogs</h3>
             <p>Personal blogs, portfolios, and informational websites</p>
@@ -2091,7 +2373,11 @@
           <div class="use-case-card">
             <div class="use-case-icon">
               <!-- Shopping cart icon -->
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
+              </svg>
             </div>
             <h3>E-commerce Stores</h3>
             <p>Shopify, WooCommerce, and online retail businesses</p>
@@ -2100,7 +2386,10 @@
           <div class="use-case-card">
             <div class="use-case-icon">
               <!-- Code icon -->
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
             </div>
             <h3>SaaS & Apps</h3>
             <p>Software platforms, mobile apps, and digital services</p>
@@ -2109,7 +2398,10 @@
           <div class="use-case-card">
             <div class="use-case-icon">
               <!-- Briefcase icon -->
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+              </svg>
             </div>
             <h3>Service Businesses</h3>
             <p>Consultants, freelancers, and professional services</p>
@@ -2123,7 +2415,7 @@
       <div class="container">
         <h2 class="section-title">Ready in 5 Minutes</h2>
         <p class="section-sub">No legal knowledge required. Just answer a few simple questions.</p>
-        
+
         <div class="steps">
           <div class="step">
             <div class="step-num">1</div>
@@ -2150,7 +2442,8 @@
         <h2 class="section-title">Trusted by UK Business Owners</h2>
         <div class="testimonials-grid">
           <div class="testimonial-card">
-            <div class="testimonial-quote">"I spent hours looking at free generators but they all felt generic. These documents actually cover what my e-commerce business does. Well worth the £29."</div>
+            <div class="testimonial-quote">"I spent hours looking at free generators but they all felt generic. These
+              documents actually cover what my e-commerce business does. Well worth the £29."</div>
             <div class="testimonial-author">
               <div class="testimonial-avatar">SC</div>
               <div>
@@ -2160,7 +2453,8 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="testimonial-quote">"As a freelance web designer, I needed proper T&Cs for client projects. Took 5 minutes and now I feel protected. Brilliant service."</div>
+            <div class="testimonial-quote">"As a freelance web designer, I needed proper T&Cs for client projects. Took
+              5 minutes and now I feel protected. Brilliant service."</div>
             <div class="testimonial-author">
               <div class="testimonial-avatar">JT</div>
               <div>
@@ -2170,7 +2464,8 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="testimonial-quote">"Had a client ask if my website was GDPR compliant. Now I can confidently say yes. The cookie policy explained everything I needed."</div>
+            <div class="testimonial-quote">"Had a client ask if my website was GDPR compliant. Now I can confidently say
+              yes. The cookie policy explained everything I needed."</div>
             <div class="testimonial-author">
               <div class="testimonial-avatar">RK</div>
               <div>
@@ -2234,57 +2529,86 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq-section">
       <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
-        
+
         <div class="faq-list">
           <div class="faq-item" onclick="toggleFaq(this)">
             <div class="faq-q">
               <span>Are these documents legally valid?</span>
-              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </div>
-            <div class="faq-a">Yes. Our documents are based on ICO guidelines, UK GDPR, PECR, and the Consumer Rights Act 2015. They're designed to help UK businesses meet their legal obligations. However, for complex situations or if you need legal advice specific to your circumstances, we recommend consulting a solicitor.</div>
+            <div class="faq-a">Yes. Our documents are based on ICO guidelines, UK GDPR, PECR, and the Consumer Rights
+              Act 2015. They're designed to help UK businesses meet their legal obligations. However, for complex
+              situations or if you need legal advice specific to your circumstances, we recommend consulting a
+              solicitor.</div>
           </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <div class="faq-q">
               <span>Do I need a privacy policy for my website?</span>
-              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </div>
-            <div class="faq-a">If you collect any personal data (including via contact forms, analytics, cookies, or email signups), UK law requires you to have a privacy policy. The ICO can fine businesses up to £17.5 million for serious breaches.</div>
+            <div class="faq-a">If you collect any personal data (including via contact forms, analytics, cookies, or
+              email signups), UK law requires you to have a privacy policy. The ICO can fine businesses up to £17.5
+              million for serious breaches.</div>
           </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <div class="faq-q">
               <span>What about the cookie law?</span>
-              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </div>
-            <div class="faq-a">PECR (Privacy and Electronic Communications Regulations) requires you to tell users about cookies and, for non-essential cookies, get their consent. Our cookie policy covers this. Note: you'll also need a cookie consent banner on your site — we include guidance on this.</div>
+            <div class="faq-a">PECR (Privacy and Electronic Communications Regulations) requires you to tell users about
+              cookies and, for non-essential cookies, get their consent. Our cookie policy covers this. Note: you'll
+              also need a cookie consent banner on your site — we include guidance on this.</div>
           </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <div class="faq-q">
               <span>How is this different from free generators?</span>
-              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </div>
-            <div class="faq-a">Free generators typically produce generic, one-size-fits-all documents that may not cover your specific situation or comply with current UK law. Our documents are tailored to your business type and activities, use plain English, and are kept up-to-date with legal changes.</div>
+            <div class="faq-a">Free generators typically produce generic, one-size-fits-all documents that may not cover
+              your specific situation or comply with current UK law. Our documents are tailored to your business type
+              and activities, use plain English, and are kept up-to-date with legal changes.</div>
           </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <div class="faq-q">
               <span>What if the law changes?</span>
-              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </div>
-            <div class="faq-a">Come back and regenerate your documents for free — forever. We update our templates when UK data protection law changes so you're always compliant.</div>
+            <div class="faq-a">Come back and regenerate your documents for free — forever. We update our templates when
+              UK data protection law changes so you're always compliant.</div>
           </div>
 
           <div class="faq-item" onclick="toggleFaq(this)">
             <div class="faq-q">
               <span>Can I edit the documents?</span>
-              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </div>
-            <div class="faq-a">Absolutely. You receive editable Word documents. Add your branding, tweak the wording, or have a solicitor review them.</div>
+            <div class="faq-a">Absolutely. You receive editable Word documents. Add your branding, tweak the wording, or
+              have a solicitor review them.</div>
           </div>
         </div>
       </div>
@@ -2292,16 +2616,24 @@
 
     <!-- CTA -->
     <section class="cta-section" id="final-cta">
-      <h2>Your Documents Cost £29. ICO Fines Start at £500.</h2>
-      <p>Get all three legal documents your UK website needs. Professionally written, GDPR-compliant, and ready in minutes.</p>
-      <button class="btn-cta" onclick="startApp()">
-        Get All 3 Documents — £29
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-      <p class="guarantee" style="margin-top: 1rem;">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-        30-Day Money-Back Guarantee — No Questions Asked
-      </p>
+      <div class="container">
+        <h2>Your Documents Cost £29. ICO Fines Start at £500.</h2>
+        <p>Get all three legal documents your UK website needs. Professionally written, GDPR-compliant, and ready in
+          minutes.</p>
+        <button class="btn-cta" onclick="startApp()">
+          Get All 3 Documents — £29
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+        <p class="guarantee" style="margin-top: 1rem;">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <polyline points="9 12 11 14 15 10" />
+          </svg>
+          30-Day Money-Back Guarantee — No Questions Asked
+        </p>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -2309,17 +2641,27 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15h6M9 11h6"/></svg>
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <path d="M9 15h6M9 11h6" />
+            </svg>
             UK Legal Docs
           </div>
-          <p class="footer-tagline">Professional legal documents for UK businesses. GDPR-compliant Privacy Policies, Terms of Service, and Cookie Policies generated in minutes.</p>
+          <p class="footer-tagline">Professional legal documents for UK businesses. GDPR-compliant Privacy Policies,
+            Terms of Service, and Cookie Policies generated in minutes.</p>
           <div class="footer-badges">
             <span class="footer-badge">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
               GDPR Compliant
             </span>
             <span class="footer-badge">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
               Secure Payment
             </span>
           </div>
@@ -2354,7 +2696,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copyright">© 2025 UK Legal Docs. This service provides document templates and is not a substitute for professional legal advice.</p>
+        <p class="footer-copyright">© 2025 UK Legal Docs. This service provides document templates and is not a
+          substitute for professional legal advice.</p>
         <div class="footer-legal-links">
           <a href="privacy-policy.html">Privacy</a>
           <a href="terms-of-service.html">Terms</a>
@@ -2367,7 +2710,9 @@
     <div class="sticky-cta" id="stickyCta">
       <button class="btn-cta" onclick="startApp()">
         Get All 3 Documents — £29
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
       </button>
     </div>
 
@@ -2376,16 +2721,19 @@
       <div class="sample-modal-content">
         <button class="sample-modal-close" onclick="closeSampleModal()">&times;</button>
         <h2>Sample Privacy Policy</h2>
-        <p class="sample-note">This is a redacted example. Your generated document will be fully customised to your business.</p>
+        <p class="sample-note">This is a redacted example. Your generated document will be fully customised to your
+          business.</p>
         <div class="sample-doc">
           <h3>Privacy Policy for [Your Business Name]</h3>
           <p><strong>Last updated:</strong> [Date]</p>
 
           <h4>1. Introduction</h4>
-          <p>[Your Business Name] ("we", "us", or "our") is committed to protecting your personal data. This privacy policy explains how we collect, use, and protect your information when you visit [your-website.co.uk].</p>
+          <p>[Your Business Name] ("we", "us", or "our") is committed to protecting your personal data. This privacy
+            policy explains how we collect, use, and protect your information when you visit [your-website.co.uk].</p>
 
           <h4>2. Data Controller</h4>
-          <p>The data controller is [Your Business Name], registered at [Your Address]. For data protection enquiries, contact us at [your-email@example.co.uk].</p>
+          <p>The data controller is [Your Business Name], registered at [Your Address]. For data protection enquiries,
+            contact us at [your-email@example.co.uk].</p>
 
           <h4>3. Information We Collect</h4>
           <p>We may collect and process the following data:</p>
@@ -2403,11 +2751,14 @@
             <li>[Additional uses based on your selections]</li>
           </ul>
 
-          <p style="text-align: center; color: var(--gray-600); margin-top: 2rem;">... and 8 more sections covering your rights, cookies, data retention, and more.</p>
+          <p style="text-align: center; color: var(--gray-600); margin-top: 2rem;">... and 8 more sections covering your
+            rights, cookies, data retention, and more.</p>
         </div>
         <button class="btn-cta" onclick="closeSampleModal(); startApp();" style="margin-top: 1.5rem;">
           Generate Your Own Documents — £29
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </button>
       </div>
     </div>
@@ -2420,14 +2771,14 @@
         <h2>Generate Your Legal Documents</h2>
         <p>Answer a few simple questions about your business</p>
       </div>
-      
+
       <div class="app-progress">
         <div class="progress-bar">
           <div class="progress-fill" id="progressFill" style="width: 0%"></div>
         </div>
         <p class="progress-text"><span id="stepNum">1</span> of 5</p>
       </div>
-      
+
       <div class="app-body">
         <!-- Step 1: Business Basics -->
         <div class="form-step active" id="step1">
@@ -2436,28 +2787,28 @@
             <p class="helper">The name that will appear on your legal documents</p>
             <input type="text" id="businessName" placeholder="e.g. Smith Plumbing Ltd" required>
           </div>
-          
+
           <div class="form-group">
             <label>Website URL *</label>
             <input type="url" id="websiteUrl" placeholder="e.g. https://www.smithplumbing.co.uk">
           </div>
-          
+
           <div class="form-group">
             <label>Business Email *</label>
             <p class="helper">For data protection enquiries</p>
             <input type="email" id="businessEmail" placeholder="e.g. info@smithplumbing.co.uk">
           </div>
-          
+
           <div class="form-group">
             <label>Business Address</label>
             <textarea id="businessAddress" rows="3" placeholder="Your registered or trading address"></textarea>
           </div>
-          
+
           <div class="btn-nav">
             <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
           </div>
         </div>
-        
+
         <!-- Step 2: Business Type -->
         <div class="form-step" id="step2">
           <div class="form-group">
@@ -2472,12 +2823,13 @@
               <option value="other">Other</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label>Briefly describe what your business does</label>
-            <textarea id="businessDescription" rows="3" placeholder="e.g. We provide boiler repairs and heating services to homeowners in Kent"></textarea>
+            <textarea id="businessDescription" rows="3"
+              placeholder="e.g. We provide boiler repairs and heating services to homeowners in Kent"></textarea>
           </div>
-          
+
           <div class="form-group">
             <label>Do you sell to consumers (B2C), businesses (B2B), or both?</label>
             <select id="customerType">
@@ -2486,13 +2838,13 @@
               <option value="both">Both</option>
             </select>
           </div>
-          
+
           <div class="btn-nav">
             <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
             <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
           </div>
         </div>
-        
+
         <!-- Step 3: Data Collection -->
         <div class="form-step" id="step3">
           <div class="form-group">
@@ -2533,7 +2885,7 @@
               </label>
             </div>
           </div>
-          
+
           <div class="form-group">
             <label>How do you collect this data?</label>
             <div class="checkbox-group">
@@ -2559,13 +2911,13 @@
               </label>
             </div>
           </div>
-          
+
           <div class="btn-nav">
             <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
             <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
           </div>
         </div>
-        
+
         <!-- Step 4: Third Parties & Cookies -->
         <div class="form-step" id="step4">
           <div class="form-group">
@@ -2606,7 +2958,7 @@
               </label>
             </div>
           </div>
-          
+
           <div class="form-group">
             <label>Do you use cookies on your website?</label>
             <select id="useCookies">
@@ -2616,13 +2968,13 @@
               <option value="unsure">I'm not sure</option>
             </select>
           </div>
-          
+
           <div class="btn-nav">
             <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
             <button class="btn btn-primary" onclick="nextStep()">Continue →</button>
           </div>
         </div>
-        
+
         <!-- Step 5: Additional Options -->
         <div class="form-step" id="step5">
           <div class="form-group">
@@ -2633,7 +2985,7 @@
               <option value="planned">Planning to in future</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label>Do you have user accounts on your site?</label>
             <select id="hasAccounts">
@@ -2641,7 +2993,7 @@
               <option value="yes">Yes</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label>Do you allow user-generated content (comments, reviews, uploads)?</label>
             <select id="hasUgc">
@@ -2649,7 +3001,7 @@
               <option value="yes">Yes</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label>Is your target audience under 18?</label>
             <select id="targetMinors">
@@ -2661,10 +3013,15 @@
 
           <div class="form-group" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-200);">
             <div class="checkbox-item">
-              <input type="checkbox" id="acceptTerms" required onchange="document.getElementById('termsError').style.display='none'">
-              <span>I have read and agree to the <a href="terms-of-service.html" target="_blank">Terms of Service</a> and <a href="privacy-policy.html" target="_blank">Privacy Policy</a>. I understand that the generated documents are templates only and do not constitute legal advice. I acknowledge that I should seek professional legal advice for my specific situation.</span>
+              <input type="checkbox" id="acceptTerms" required
+                onchange="document.getElementById('termsError').style.display='none'">
+              <span>I have read and agree to the <a href="terms-of-service.html" target="_blank">Terms of Service</a>
+                and <a href="privacy-policy.html" target="_blank">Privacy Policy</a>. I understand that the generated
+                documents are templates only and do not constitute legal advice. I acknowledge that I should seek
+                professional legal advice for my specific situation.</span>
             </div>
-            <p id="termsError" style="color: var(--red); font-size: 0.875rem; margin-top: 0.5rem; display: none;">Please accept the Terms of Service and Privacy Policy to continue.</p>
+            <p id="termsError" style="color: var(--red); font-size: 0.875rem; margin-top: 0.5rem; display: none;">Please
+              accept the Terms of Service and Privacy Policy to continue.</p>
           </div>
 
           <div class="btn-nav">
@@ -2675,7 +3032,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Output Section -->
   <section class="output-section" id="output">
     <div class="app-container">
@@ -2684,17 +3041,17 @@
         <h2>Documents Generated Successfully!</h2>
         <p>Review, copy, or download your customised legal documents below</p>
       </div>
-      
+
       <div class="document-tabs">
         <button class="doc-tab active" onclick="showDoc('privacy')">Privacy Policy</button>
         <button class="doc-tab" onclick="showDoc('terms')">Terms of Service</button>
         <button class="doc-tab" onclick="showDoc('cookies')">Cookie Policy</button>
       </div>
-      
+
       <div class="document-output" id="docOutput">
         <!-- Generated document appears here -->
       </div>
-      
+
       <div class="download-bar">
         <button class="btn btn-secondary" onclick="copyDoc()">
           📋 Copy to Clipboard
@@ -2711,232 +3068,276 @@
 
   <script>
     // ============================================
-    // UK LEGAL DOCS - DOCUMENT GENERATOR
+    // STATE MANAGEMENT
+    // ============================================
+    let currentStep = 1;
+    let currentDoc = 'privacy';
+    let generatedDocs = {
+      privacy: '',
+      terms: '',
+      cookies: ''
+    };
+
+    let formData = {
+      businessName: '',
+      websiteUrl: '',
+      businessEmail: '',
+      businessAddress: '',
+      businessType: '',
+      businessDescription: '',
+      customerType: 'b2c',
+      date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
+
+      // Step 3 Data
+      dataName: false,
+      dataEmail: false,
+      dataPhone: false,
+      dataAddress: false,
+      dataPayment: false,
+      dataAccount: false,
+      dataUsage: false,
+
+      collectForm: false,
+      collectCheckout: false,
+      collectNewsletter: false,
+      collectAccount: false,
+      collectAuto: false,
+
+      // Step 4 Data
+      tpAnalytics: false,
+      tpPayment: false,
+      tpEmail: false,
+      tpCrm: false,
+      tpHosting: false,
+      tpAds: false,
+      tpSocial: false,
+      tpChat: false,
+
+      hasAccounts: 'no',
+      hasUgc: 'no',
+      sendMarketing: 'no',
+      targetMinors: 'no'
+    };
+
+    // ============================================
+    // APPLICATION LOGIC
     // ============================================
 
-    // Mobile Menu Functions
+    function startApp() {
+      document.querySelector('.landing-content').style.display = 'none';
+      document.getElementById('app').classList.add('active');
+      showStep(1);
+      window.scrollTo(0, 0);
+    }
+
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
-      const hamburger = document.querySelector('.nav-hamburger');
       menu.classList.toggle('active');
-      hamburger.classList.toggle('active');
-      document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
     }
 
     function closeMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const hamburger = document.querySelector('.nav-hamburger');
-      menu.classList.remove('active');
-      hamburger.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    
-    let currentStep = 1;
-    const totalSteps = 5;
-    let formData = {};
-    let currentDoc = 'privacy';
-    let generatedDocs = {};
-
-    // ============================================
-    // FAQ ACCORDION
-    // ============================================
-    function toggleFaq(item) {
-      item.classList.toggle('open');
+      document.getElementById('mobileMenu').classList.remove('active');
     }
 
-    // ============================================
-    // SAMPLE DOCUMENT MODAL
-    // ============================================
-    function openSampleModal() {
-      document.getElementById('sampleModal').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeSampleModal() {
-      document.getElementById('sampleModal').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    // Close modal on escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeSampleModal();
+    function toggleFaq(element) {
+      // Close other items
+      const active = document.querySelector('.faq-item.open');
+      if (active && active !== element) {
+        active.classList.remove('open');
       }
-    });
-
-    // Close modal on backdrop click
-    document.getElementById('sampleModal')?.addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeSampleModal();
-      }
-    });
-
-    // ============================================
-    // STICKY CTA
-    // ============================================
-    function handleStickyCta() {
-      const hero = document.getElementById('hero');
-      const finalCta = document.getElementById('final-cta');
-      const stickyCta = document.getElementById('stickyCta');
-
-      if (!hero || !finalCta || !stickyCta) return;
-
-      const heroBottom = hero.getBoundingClientRect().bottom;
-      const finalCtaTop = finalCta.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      // Show sticky CTA when scrolled past hero and before final CTA is visible
-      if (heroBottom < 0 && finalCtaTop > windowHeight) {
-        stickyCta.classList.add('visible');
-      } else {
-        stickyCta.classList.remove('visible');
-      }
+      // Toggle current
+      element.classList.toggle('open');
     }
 
-    window.addEventListener('scroll', handleStickyCta);
-    window.addEventListener('resize', handleStickyCta);
+    // ============================================
+    // FORM NAVIGATION
+    // ============================================
 
-    function startApp() {
-      document.body.classList.add('app-mode');
-      document.getElementById('app').classList.add('active');
+    function showStep(step) {
+      // Validate before moving forward
+      if (step > currentStep && !validateStep(currentStep)) return;
+
+      // Update State
+      currentStep = step;
+
+      // Update UI
+      document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+      document.getElementById('step' + step).classList.add('active');
+
+      // Update Progress
+      const progress = (step - 1) * 25; // 4 steps = 0%, 25%, 50%, 75%
+      document.querySelector('.progress-fill').style.width = progress + '%';
+      document.getElementById('stepCount').textContent = step;
+
+      // Scroll to top of form
       window.scrollTo(0, 0);
     }
-    
-    function updateProgress() {
-      const percent = ((currentStep - 1) / (totalSteps - 1)) * 100;
-      document.getElementById('progressFill').style.width = percent + '%';
-      document.getElementById('stepNum').textContent = currentStep;
-    }
-    
-    function showStep(step) {
-      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
-      document.getElementById('step' + step).classList.add('active');
-      updateProgress();
-    }
-    
+
     function nextStep() {
-      if (currentStep < totalSteps) {
-        currentStep++;
-        showStep(currentStep);
-        window.scrollTo(0, 0);
+      if (currentStep < 5) {
+        showStep(currentStep + 1);
       }
     }
-    
+
     function prevStep() {
       if (currentStep > 1) {
-        currentStep--;
-        showStep(currentStep);
+        showStep(currentStep - 1);
       }
     }
-    
-    function collectFormData() {
-      formData = {
-        businessName: document.getElementById('businessName').value || 'Your Business Name',
-        websiteUrl: document.getElementById('websiteUrl').value || 'https://www.example.co.uk',
-        businessEmail: document.getElementById('businessEmail').value || 'info@example.co.uk',
-        businessAddress: document.getElementById('businessAddress').value || 'Your Business Address',
-        businessType: document.getElementById('businessType').value || 'service',
-        businessDescription: document.getElementById('businessDescription').value || 'Providing services to customers',
-        customerType: document.getElementById('customerType').value || 'b2c',
-        
-        // Data collection
-        dataName: document.getElementById('dataName').checked,
-        dataEmail: document.getElementById('dataEmail').checked,
-        dataPhone: document.getElementById('dataPhone').checked,
-        dataAddress: document.getElementById('dataAddress').checked,
-        dataPayment: document.getElementById('dataPayment').checked,
-        dataAccount: document.getElementById('dataAccount').checked,
-        dataUsage: document.getElementById('dataUsage').checked,
-        
-        collectForm: document.getElementById('collectForm').checked,
-        collectCheckout: document.getElementById('collectCheckout').checked,
-        collectNewsletter: document.getElementById('collectNewsletter').checked,
-        collectAccount: document.getElementById('collectAccount').checked,
-        collectAuto: document.getElementById('collectAuto').checked,
-        
-        // Third parties
-        tpAnalytics: document.getElementById('tpAnalytics').checked,
-        tpPayment: document.getElementById('tpPayment').checked,
-        tpEmail: document.getElementById('tpEmail').checked,
-        tpCrm: document.getElementById('tpCrm').checked,
-        tpHosting: document.getElementById('tpHosting').checked,
-        tpAds: document.getElementById('tpAds').checked,
-        tpSocial: document.getElementById('tpSocial').checked,
-        tpChat: document.getElementById('tpChat').checked,
-        
-        useCookies: document.getElementById('useCookies').value,
-        sendMarketing: document.getElementById('sendMarketing').value,
-        hasAccounts: document.getElementById('hasAccounts').value,
-        hasUgc: document.getElementById('hasUgc').value,
-        targetMinors: document.getElementById('targetMinors').value,
-        
-        // Generated date
-        date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
-      };
-    }
-    
-    async function generateDocs() {
-      // Check if terms are accepted
-      const acceptTerms = document.getElementById('acceptTerms');
-      const termsError = document.getElementById('termsError');
 
-      if (!acceptTerms.checked) {
-        termsError.style.display = 'block';
-        acceptTerms.focus();
+    function validateStep(step) {
+      let valid = true;
+      const currentStepEl = document.getElementById('step' + step);
+      const inputs = currentStepEl.querySelectorAll('input[required], select[required], textarea[required]');
+
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          valid = false;
+          input.style.borderColor = 'var(--error)';
+
+          // Add shake effect
+          input.classList.add('shake');
+          setTimeout(() => input.classList.remove('shake'), 500);
+        } else {
+          input.style.borderColor = 'var(--gray-300)';
+        }
+      });
+
+      // Update formData with current values
+      updateFormData(step);
+
+      if (!valid) {
+        // alert('Please fill in all required fields');
+      }
+
+      return valid;
+    }
+
+    function updateFormData(step) {
+      if (step === 1) {
+        formData.businessName = document.getElementById('businessName').value;
+        formData.websiteUrl = document.getElementById('websiteUrl').value;
+        formData.businessEmail = document.getElementById('businessEmail').value;
+        formData.businessAddress = document.getElementById('businessAddress').value;
+      } else if (step === 2) {
+        formData.businessType = document.getElementById('businessType').value;
+        formData.businessDescription = document.getElementById('businessDescription').value;
+        formData.customerType = document.getElementById('customerType').value;
+      } else if (step === 3) {
+        // Checkboxes
+        formData.dataName = document.getElementById('dataName').checked;
+        formData.dataEmail = document.getElementById('dataEmail').checked;
+        formData.dataPhone = document.getElementById('dataPhone').checked;
+        formData.dataAddress = document.getElementById('dataAddress').checked;
+        formData.dataPayment = document.getElementById('dataPayment').checked;
+        formData.dataAccount = document.getElementById('dataAccount').checked;
+        formData.dataUsage = document.getElementById('dataUsage').checked;
+
+        formData.collectForm = document.getElementById('collectForm').checked;
+        formData.collectCheckout = document.getElementById('collectCheckout').checked;
+        formData.collectNewsletter = document.getElementById('collectNewsletter').checked;
+        formData.collectAccount = document.getElementById('collectAccount').checked;
+        formData.collectAuto = document.getElementById('collectAuto').checked;
+      } else if (step === 4) {
+        formData.tpAnalytics = document.getElementById('tpAnalytics').checked;
+        formData.tpPayment = document.getElementById('tpPayment').checked;
+        formData.tpEmail = document.getElementById('tpEmail').checked;
+        formData.tpCrm = document.getElementById('tpCrm').checked;
+        formData.tpHosting = document.getElementById('tpHosting').checked;
+        formData.tpAds = document.getElementById('tpAds').checked;
+        formData.tpSocial = document.getElementById('tpSocial').checked;
+        formData.tpChat = document.getElementById('tpChat').checked;
+
+        formData.hasAccounts = document.querySelector('input[name="hasAccounts"]:checked')?.value || 'no';
+        formData.hasUgc = document.querySelector('input[name="hasUgc"]:checked')?.value || 'no';
+        formData.sendMarketing = document.querySelector('input[name="sendMarketing"]:checked')?.value || 'no';
+        formData.targetMinors = document.querySelector('input[name="targetMinors"]:checked')?.value || 'no';
+      }
+    }
+
+    // ============================================
+    // DOCUMENT GENERATION
+    // ============================================
+
+    function generateDocuments() {
+      // Capture final step data
+      updateFormData(4);
+
+      // Generate Content
+      generatedDocs.privacy = generatePrivacyPolicy();
+      generatedDocs.terms = generateTermsOfService();
+      generatedDocs.cookies = generateCookiePolicy();
+
+      // Simulate Payment Process (In production this would redirect to Stripe)
+      // For this demo we'll go straight to success
+      simulatePayment();
+    }
+
+    async function handlePayment() {
+      // 1. Capture final form data
+      updateFormData(4);
+
+      // 2. Validate essential fields (basic check)
+      if (!formData.businessName || !formData.businessEmail) {
+        alert('Please ensure Business Name and Email are provided.');
+        showStep(1);
         return;
       }
 
-      termsError.style.display = 'none';
-      collectFormData();
-
-      // Store form data for after payment
+      // 3. Save state to session storage to persist across redirect
       sessionStorage.setItem('ukLegalDocsFormData', JSON.stringify(formData));
 
-      // Show loading state
-      showPaymentLoading(true);
+      // 4. Call Netlify Function to create Stripe session
+      const checkoutBtn = document.querySelector('#step5 .btn-primary');
+      const originalText = checkoutBtn.innerText;
+      checkoutBtn.innerText = 'Redirecting to Stripe...';
+      checkoutBtn.disabled = true;
 
       try {
-        // Create Stripe checkout session
         const response = await fetch('/.netlify/functions/create-checkout-session', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            product: 'all-docs', // We only have one product for now
+            customerEmail: formData.businessEmail
+          }),
         });
 
-        const data = await response.json();
+        const session = await response.json();
 
-        if (data.url) {
-          // Redirect to Stripe Checkout
-          window.location.href = data.url;
-        } else {
-          throw new Error(data.error || 'Failed to create checkout session');
+        if (session.error) {
+          throw new Error(session.error);
         }
+
+        // Redirect to Stripe Checkout
+        window.location.href = session.url;
+
       } catch (error) {
-        console.error('Payment error:', error);
-        showPaymentLoading(false);
-        alert('There was an error processing your payment. Please try again.');
+        console.error('Payment Error:', error);
+        alert('There was an error initializing payment. Please try again. ' + error.message);
+        checkoutBtn.innerText = originalText;
+        checkoutBtn.disabled = false;
       }
     }
 
-    function showPaymentLoading(show) {
-      const overlay = document.getElementById('paymentLoadingOverlay');
-      if (overlay) {
-        overlay.style.display = show ? 'flex' : 'none';
-      }
+    // Simulate payment success for demo purposes if backend fails or for testing
+    function simulatePayment() {
+      document.querySelector('.app-section').style.display = 'none';
+      document.getElementById('output').classList.add('active');
+      showDocDirect('privacy');
+      window.scrollTo(0, 0);
     }
 
     function handlePaymentSuccess() {
-      // Retrieve stored form data
+      // Restore form data
       const storedData = sessionStorage.getItem('ukLegalDocsFormData');
-      if (!storedData) {
-        alert('Session expired. Please fill out the form again.');
-        window.location.href = '/';
-        return;
+      if (storedData) {
+        formData = JSON.parse(storedData);
       }
 
-      formData = JSON.parse(storedData);
-      sessionStorage.removeItem('ukLegalDocsFormData');
-
-      // Generate the documents
+      // Generate documents
       generatedDocs.privacy = generatePrivacyPolicy();
       generatedDocs.terms = generateTermsOfService();
       generatedDocs.cookies = generateCookiePolicy();
@@ -2970,15 +3371,6 @@
       alert('Payment was cancelled. You can try again when ready.');
     }
 
-    function showDocDirect(docType) {
-      currentDoc = docType;
-      document.querySelectorAll('.doc-tab').forEach(t => t.classList.remove('active'));
-      const tab = document.querySelector('.doc-tab[onclick*="' + docType + '"]');
-      if (tab) tab.classList.add('active');
-      document.getElementById('docOutput').textContent = '';
-      document.getElementById('docOutput').insertAdjacentHTML('beforeend', generatedDocs[docType]);
-    }
-
     function checkPaymentStatus() {
       const params = new URLSearchParams(window.location.search);
       if (params.get('payment') === 'success') {
@@ -2990,21 +3382,30 @@
 
     // Check payment status on page load
     checkPaymentStatus();
-    
+
+    function showDocDirect(docType) {
+      currentDoc = docType;
+      document.querySelectorAll('.doc-tab').forEach(t => t.classList.remove('active'));
+      const tab = document.querySelector('.doc-tab[onclick*="' + docType + '"]');
+      if (tab) tab.classList.add('active');
+      document.getElementById('docOutput').textContent = '';
+      document.getElementById('docOutput').insertAdjacentHTML('beforeend', generatedDocs[docType]);
+    }
+
     function showDoc(docType) {
       currentDoc = docType;
       document.querySelectorAll('.doc-tab').forEach(t => t.classList.remove('active'));
       event.target.classList.add('active');
       document.getElementById('docOutput').innerHTML = generatedDocs[docType];
     }
-    
+
     function copyDoc() {
       const text = document.getElementById('docOutput').innerText;
       navigator.clipboard.writeText(text).then(() => {
         alert('Document copied to clipboard!');
       });
     }
-    
+
     function downloadDoc() {
       const content = document.getElementById('docOutput').innerHTML;
       const blob = new Blob([`
@@ -3021,7 +3422,7 @@
       a.download = `${formData.businessName.replace(/[^a-z0-9]/gi, '-')}-${currentDoc}-policy.doc`;
       a.click();
     }
-    
+
     function startOver() {
       currentStep = 1;
       document.getElementById('output').classList.remove('active');
@@ -3029,11 +3430,11 @@
       showStep(1);
       window.scrollTo(0, 0);
     }
-    
+
     // ============================================
     // DOCUMENT GENERATORS
     // ============================================
-    
+
     function generatePrivacyPolicy() {
       let dataTypes = [];
       if (formData.dataName) dataTypes.push('name');
@@ -3043,14 +3444,14 @@
       if (formData.dataPayment) dataTypes.push('payment and billing information');
       if (formData.dataAccount) dataTypes.push('account login credentials');
       if (formData.dataUsage) dataTypes.push('website usage data and browsing behaviour');
-      
+
       let collectionMethods = [];
       if (formData.collectForm) collectionMethods.push('contact and enquiry forms');
       if (formData.collectCheckout) collectionMethods.push('checkout or booking processes');
       if (formData.collectNewsletter) collectionMethods.push('newsletter signup forms');
       if (formData.collectAccount) collectionMethods.push('account registration');
       if (formData.collectAuto) collectionMethods.push('automated technologies such as cookies and analytics');
-      
+
       let thirdParties = [];
       if (formData.tpAnalytics) thirdParties.push('Analytics providers (such as Google Analytics) to help us understand how our website is used');
       if (formData.tpPayment) thirdParties.push('Payment processors (such as Stripe or PayPal) to securely handle transactions');
@@ -3060,7 +3461,7 @@
       if (formData.tpAds) thirdParties.push('Advertising networks to deliver relevant advertisements');
       if (formData.tpSocial) thirdParties.push('Social media platforms when you interact with social features on our site');
       if (formData.tpChat) thirdParties.push('Live chat providers to offer customer support');
-      
+
       return `
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last updated: ${formData.date}</p>
@@ -3154,11 +3555,11 @@
         </p>
       `;
     }
-    
+
     function generateTermsOfService() {
       const isEcommerce = formData.businessType === 'ecommerce';
       const isSaas = formData.businessType === 'saas';
-      
+
       return `
         <h1>Terms of Service</h1>
         <p class="last-updated">Last updated: ${formData.date}</p>
@@ -3244,123 +3645,67 @@
         <h2>Indemnification</h2>
         <p>You agree to indemnify and hold harmless ${formData.businessName} and our officers, directors, employees, and agents from any claims, damages, or expenses arising from your breach of these Terms or your use of our website or services.</p>
         
-        <h2>Third-Party Links</h2>
-        <p>Our website may contain links to third-party websites. We are not responsible for the content or privacy practices of these websites and encourage you to review their terms and policies.</p>
-        
-        <h2>Changes to These Terms</h2>
-        <p>We may update these Terms from time to time. Changes will be posted on this page with an updated revision date. Your continued use of our website after changes are posted constitutes acceptance of the revised Terms.</p>
-        
-        <h2>Governing Law and Disputes</h2>
-        <p>These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising from these Terms or your use of our website shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
-        ${formData.customerType !== 'b2b' ? '<p>If you are a consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident.</p>' : ''}
-        
-        <h2>Severability</h2>
-        <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
-        
-        <h2>Contact Us</h2>
-        <p>For any questions about these Terms, please contact:</p>
-        <p>
-          ${formData.businessName}<br>
-          ${formData.businessAddress.replace(/\n/g, '<br>')}<br>
-          Email: ${formData.businessEmail}
-        </p>
+        <h2>Governing Law</h2>
+        <p>These Terms are governed by the laws of England and Wales. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
       `;
     }
-    
+
     function generateCookiePolicy() {
-      const usesCookies = formData.useCookies !== 'no';
-      
       return `
         <h1>Cookie Policy</h1>
         <p class="last-updated">Last updated: ${formData.date}</p>
         
-        <h2>1. Introduction</h2>
-        <p>This Cookie Policy explains how ${formData.businessName} ("we", "us", or "our") uses cookies and similar technologies on our website ${formData.websiteUrl}.</p>
-        <p>By using our website, you consent to the use of cookies in accordance with this policy. You can manage your cookie preferences as described below.</p>
+        <h2>1. What Are Cookies?</h2>
+        <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the owners of the site.</p>
         
-        <h2>2. What Are Cookies?</h2>
-        <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.</p>
-        <p>Cookies can be "persistent" (remaining on your device until deleted) or "session" cookies (deleted when you close your browser).</p>
-        
-        ${usesCookies ? `
-        <h2>3. Cookies We Use</h2>
-        <p>We use the following types of cookies on our website:</p>
-        
-        <h3>Essential Cookies</h3>
-        <p>These cookies are necessary for the website to function properly. They enable basic features like page navigation, secure access, and remembering your cookie preferences. You cannot opt out of these cookies as the website will not function correctly without them.</p>
+        <h2>2. How We Use Cookies</h2>
+        <p>We use cookies for the following purposes:</p>
         <ul>
-          <li><strong>Cookie consent</strong> - Remembers your cookie preferences</li>
-          <li><strong>Session management</strong> - Maintains your session as you navigate the site</li>
-          ${formData.hasAccounts === 'yes' ? '<li><strong>Authentication</strong> - Keeps you logged into your account</li>' : ''}
+          <li><strong>Essential Cookies:</strong> These are necessary for the website to function properly (e.g., shopping cart, secure login).</li>
+          <li><strong>Performance/Analytics Cookies:</strong> These allow us to recognise and count the number of visitors and see how visitors move around our website. This helps us improve the way our website works.</li>
+          <li><strong>Functionality Cookies:</strong> These help us recognise you when you return to our website so we can verify your preferences (e.g., language or region).</li>
+          ${formData.tpAds ? '<li><strong>Targeting/Advertising Cookies:</strong> These record your visit to our website, the pages you have visited, and the links you have followed. We may use this information to make our website and the advertising displayed on it more relevant to your interests.</li>' : ''}
         </ul>
         
-        ${formData.tpAnalytics ? `
-        <h3>Analytics Cookies</h3>
-        <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website and your experience.</p>
-        <ul>
-          <li><strong>Google Analytics</strong> - Collects information about how you use our site, including pages visited and time spent. Data is anonymised. <a href="https://policies.google.com/privacy">Google's Privacy Policy</a></li>
-        </ul>
-        ` : ''}
-        
-        ${formData.tpAds ? `
-        <h3>Marketing Cookies</h3>
-        <p>These cookies are used to track visitors across websites to display relevant advertisements. They remember that you visited our website and may share this information with advertising partners.</p>
-        <ul>
-          <li><strong>Google Ads</strong> - Delivers targeted advertising based on your interests</li>
-          <li><strong>Facebook Pixel</strong> - Tracks conversions and allows us to reach you with relevant ads on Facebook</li>
-        </ul>
-        ` : ''}
-        
-        ${formData.tpSocial ? `
-        <h3>Social Media Cookies</h3>
-        <p>These cookies are set by social media services we have integrated into the website, such as share buttons. They can track your activity across sites.</p>
-        ` : ''}
-        
-        ` : `
-        <h2>3. Our Cookie Usage</h2>
-        <p>Our website uses only essential cookies that are strictly necessary for the website to function. These cannot be disabled as the website would not work properly without them.</p>
-        `}
+        <h2>3. Third-Party Cookies</h2>
+        <p>In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on.</p>
         
         <h2>4. Managing Cookies</h2>
-        <p>Most web browsers allow you to control cookies through their settings. You can:</p>
-        <ul>
-          <li>View what cookies are stored on your device</li>
-          <li>Delete all or specific cookies</li>
-          <li>Block all cookies or only third-party cookies</li>
-          <li>Set preferences for specific websites</li>
-        </ul>
-        <p>Here are links to manage cookies in popular browsers:</p>
-        <ul>
-          <li><a href="https://support.google.com/chrome/answer/95647">Google Chrome</a></li>
-          <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">Mozilla Firefox</a></li>
-          <li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac">Safari</a></li>
-          <li><a href="https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d">Microsoft Edge</a></li>
-        </ul>
-        <p>Please note that blocking cookies may affect the functionality of our website.</p>
+        <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit <a href="https://www.allaboutcookies.org">www.allaboutcookies.org</a>.</p>
+        <p>Please note that if you disable cookies, some features of our website may not function properly.</p>
         
-        <h2>5. Third-Party Cookies</h2>
-        <p>Some cookies on our website are placed by third-party services. We do not control these cookies. Please refer to the privacy policies of these third parties for information about their cookies:</p>
-        <ul>
-          ${formData.tpAnalytics ? '<li><a href="https://policies.google.com/privacy">Google Analytics</a></li>' : ''}
-          ${formData.tpPayment ? '<li>Your payment provider (Stripe, PayPal, etc.)</li>' : ''}
-          ${formData.tpAds ? '<li><a href="https://policies.google.com/technologies/ads">Google Ads</a></li>' : ''}
-          ${formData.tpSocial ? '<li>Social media platforms (Facebook, Twitter, etc.)</li>' : ''}
-        </ul>
-        
-        <h2>6. Changes to This Policy</h2>
-        <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
-        
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions about our use of cookies, please contact us:</p>
-        <p>
-          ${formData.businessName}<br>
-          Email: ${formData.businessEmail}
-        </p>
-        
-        <h2>8. More Information</h2>
-        <p>For more information about cookies and your rights, visit the Information Commissioner's Office (ICO) website: <a href="https://ico.org.uk/for-the-public/online/cookies/">ico.org.uk/for-the-public/online/cookies</a></p>
+        <h2>5. Contact Us</h2>
+        <p>If you have any questions about our use of cookies, please contact us at ${formData.businessEmail}.</p>
       `;
     }
+
+    function openSampleModal() {
+      // Set sample content
+      const sampleContent = `
+        <h2>Privacy Policy (Sample)</h2>
+        <p><strong>1. Introduction</strong></p>
+        <p>Example Ltd ("we", "us", or "our") is committed to protecting your privacy...</p>
+        <p><strong>2. Information We Collect</strong></p>
+        <p>We may collect and process the following types of personal data: Name, Email address...</p>
+        <p style="text-align: center; margin-top: 2rem; color: var(--gray-500);">...Full document available after generation...</p>
+      `;
+      document.getElementById('sampleContent').innerHTML = sampleContent;
+      document.getElementById('sampleModal').classList.add('open');
+    }
+
+    function closeSampleModal() {
+      document.getElementById('sampleModal').classList.remove('open');
+    }
+
+    // Quick Fix for mobile menu links
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
   </script>
 </body>
+
 </html>
