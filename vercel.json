@@ -1,15 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
+  "rewrites": [
+    { "source": "/gumroad", "destination": "/gumroad.html" },
+    { "source": "/((?!api|gumroad\\.html|.*\\..*).*)", "destination": "/index.html" }
   ],
-  "routes": [
+  "redirects": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.getlegaldocs.co.uk" }],
+      "destination": "https://getlegaldocs.co.uk/:path",
+      "permanent": true
     }
   ]
 }

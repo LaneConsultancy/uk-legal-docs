@@ -3287,14 +3287,14 @@
       // 3. Save state to session storage to persist across redirect
       sessionStorage.setItem('ukLegalDocsFormData', JSON.stringify(formData));
 
-      // 4. Call Netlify Function to create Stripe session
+      // 4. Call serverless function to create Stripe session
       const checkoutBtn = document.querySelector('#step5 .btn-primary');
       const originalText = checkoutBtn.innerText;
       checkoutBtn.innerText = 'Redirecting to Stripe...';
       checkoutBtn.disabled = true;
 
       try {
-        const response = await fetch('/.netlify/functions/create-checkout-session', {
+        const response = await fetch('/api/create-checkout-session', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
