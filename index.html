@@ -4,6 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Analytics 4 - Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-4REZ2D1MW5', { 'send_page_view': false });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4REZ2D1MW5"></script>
   <title>UK Legal Docs - Privacy Policy & Terms Generator for UK Businesses</title>
   <meta name="description"
     content="Generate GDPR-compliant Privacy Policies, Terms of Service, and Cookie Policies for your UK business. Lawyer-quality documents for £29.">
@@ -2068,6 +2086,97 @@
       font-size: 1.25rem;
       font-family: var(--font-sans);
     }
+
+    /* Cookie Consent Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-light);
+      padding: 1.25rem 1.5rem;
+      z-index: 10000;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+
+    .cookie-banner.visible {
+      transform: translateY(0);
+    }
+
+    .cookie-banner-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .cookie-banner-text {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .cookie-banner-text a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .cookie-banner-buttons {
+      display: flex;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .cookie-btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-sans);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .cookie-btn-accept {
+      background: var(--primary);
+      color: white;
+    }
+
+    .cookie-btn-accept:hover {
+      background: var(--primary-dark);
+    }
+
+    .cookie-btn-reject {
+      background: var(--gray-100);
+      color: var(--gray-700);
+      border: 1px solid var(--border-light);
+    }
+
+    .cookie-btn-reject:hover {
+      background: var(--gray-200);
+    }
+
+    @media (max-width: 600px) {
+      .cookie-banner-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cookie-banner-buttons {
+        width: 100%;
+      }
+
+      .cookie-btn {
+        flex: 1;
+      }
+    }
   </style>
 </head>
 
@@ -3066,6 +3175,20 @@
     </div>
   </section>
 
+  <!-- Cookie Consent Banner -->
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-describedby="cookieBannerText">
+    <div class="cookie-banner-inner">
+      <p class="cookie-banner-text" id="cookieBannerText">
+        We use cookies for analytics to understand how visitors use our site. No personal data is shared with advertisers.
+        <a href="/cookies">Cookie Policy</a>
+      </p>
+      <div class="cookie-banner-buttons">
+        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept analytics</button>
+        <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Reject</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     // ============================================
     // STATE MANAGEMENT
@@ -3120,6 +3243,75 @@
     };
 
     // ============================================
+    // ANALYTICS: CONSENT & TRACKING
+    // ============================================
+
+    function hasConsentChoice() {
+      return localStorage.getItem('cookie_consent') !== null;
+    }
+
+    function getConsentChoice() {
+      return localStorage.getItem('cookie_consent');
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('cookie_consent', 'accepted');
+      localStorage.setItem('cookie_consent_date', new Date().toISOString());
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+      document.getElementById('cookieBanner').classList.remove('visible');
+      trackVirtualPageView(getCurrentPageName());
+    }
+
+    function rejectCookies() {
+      localStorage.setItem('cookie_consent', 'rejected');
+      localStorage.setItem('cookie_consent_date', new Date().toISOString());
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      });
+      document.getElementById('cookieBanner').classList.remove('visible');
+    }
+
+    function restoreConsentState() {
+      if (hasConsentChoice()) {
+        if (getConsentChoice() === 'accepted') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        }
+      } else {
+        setTimeout(function() {
+          document.getElementById('cookieBanner').classList.add('visible');
+        }, 1000);
+      }
+    }
+
+    function trackVirtualPageView(pageName) {
+      gtag('event', 'page_view', {
+        page_title: pageName,
+        page_location: window.location.origin + '/' + pageName,
+        page_path: '/' + pageName
+      });
+    }
+
+    function trackEvent(eventName, params) {
+      gtag('event', eventName, params || {});
+    }
+
+    function getCurrentPageName() {
+      if (document.getElementById('output').classList.contains('active')) {
+        return 'document_output';
+      }
+      if (document.getElementById('app').classList.contains('active')) {
+        return 'form_step_' + currentStep;
+      }
+      return 'landing';
+    }
+
+    restoreConsentState();
+
+    // ============================================
     // APPLICATION LOGIC
     // ============================================
 
@@ -3128,6 +3320,7 @@
       document.getElementById('app').classList.add('active');
       showStep(1);
       window.scrollTo(0, 0);
+      trackEvent('begin_form');
     }
 
     function toggleMobileMenu() {
@@ -3147,6 +3340,7 @@
       }
       // Toggle current
       element.classList.toggle('open');
+      if (element.classList.contains('open')) { trackEvent('faq_opened', { question: element.querySelector('.faq-q')?.textContent || '' }); }
     }
 
     // ============================================
@@ -3171,17 +3365,22 @@
 
       // Scroll to top of form
       window.scrollTo(0, 0);
+      trackVirtualPageView('form_step_' + step);
     }
 
     function nextStep() {
       if (currentStep < 5) {
+        var fromStep = currentStep;
         showStep(currentStep + 1);
+        trackEvent('form_next_step', { from_step: fromStep, to_step: currentStep });
       }
     }
 
     function prevStep() {
       if (currentStep > 1) {
+        var fromStep = currentStep;
         showStep(currentStep - 1);
+        trackEvent('form_prev_step', { from_step: fromStep, to_step: currentStep });
       }
     }
 
@@ -3292,6 +3491,7 @@
       const originalText = checkoutBtn.innerText;
       checkoutBtn.innerText = 'Redirecting to Stripe...';
       checkoutBtn.disabled = true;
+      trackEvent('begin_checkout', { currency: 'GBP', value: 29.00, items: [{ item_name: 'UK Legal Docs Bundle', price: 29.00 }] });
 
       try {
         const response = await fetch('/api/create-checkout-session', {
@@ -3348,6 +3548,10 @@
       document.getElementById('output').classList.add('active');
       showDocDirect('privacy');
 
+      // Capture session_id before cleaning URL, then track purchase
+      var sessionId = new URLSearchParams(window.location.search).get('session_id') || Date.now().toString();
+      trackEvent('purchase', { transaction_id: sessionId, currency: 'GBP', value: 29.00, items: [{ item_name: 'UK Legal Docs Bundle', price: 29.00 }] });
+
       // Clean URL
       window.history.replaceState({}, document.title, '/');
     }
@@ -3368,6 +3572,7 @@
       window.history.replaceState({}, document.title, '/');
 
       // Show message
+      trackEvent('checkout_cancelled', { currency: 'GBP', value: 29.00 });
       alert('Payment was cancelled. You can try again when ready.');
     }
 
@@ -3383,6 +3588,11 @@
     // Check payment status on page load
     checkPaymentStatus();
 
+    // Track initial page view (only if not returning from Stripe redirect)
+    if (!new URLSearchParams(window.location.search).get('payment')) {
+      trackVirtualPageView('landing');
+    }
+
     function showDocDirect(docType) {
       currentDoc = docType;
       document.querySelectorAll('.doc-tab').forEach(t => t.classList.remove('active'));
@@ -3396,17 +3606,20 @@
       currentDoc = docType;
       document.querySelectorAll('.doc-tab').forEach(t => t.classList.remove('active'));
       event.target.classList.add('active');
-      document.getElementById('docOutput').innerHTML = generatedDocs[docType];
+      document.getElementById('docOutput').innerHTML = generatedDocs[docType]; // docType is always 'privacy'|'terms'|'cookies' - no user input
+      trackEvent('view_document', { document_type: docType });
     }
 
     function copyDoc() {
       const text = document.getElementById('docOutput').innerText;
+      trackEvent('copy_document', { document_type: currentDoc });
       navigator.clipboard.writeText(text).then(() => {
         alert('Document copied to clipboard!');
       });
     }
 
     function downloadDoc() {
+      trackEvent('download_document', { document_type: currentDoc });
       const content = document.getElementById('docOutput').innerHTML;
       const blob = new Blob([`
         <html>
