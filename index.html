@@ -3487,7 +3487,7 @@
       sessionStorage.setItem('ukLegalDocsFormData', JSON.stringify(formData));
 
       // 4. Call serverless function to create Stripe session
-      const checkoutBtn = document.querySelector('#step5 .btn-primary');
+      const checkoutBtn = document.querySelector('#step5 .btn-gold');
       const originalText = checkoutBtn.innerText;
       checkoutBtn.innerText = 'Redirecting to Stripe...';
       checkoutBtn.disabled = true;
