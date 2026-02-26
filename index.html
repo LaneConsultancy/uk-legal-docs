@@ -3476,7 +3476,13 @@
       // 1. Capture final form data
       updateFormData(4);
 
-      // 2. Validate essential fields (basic check)
+      // 2. Validate terms acceptance
+      if (!document.getElementById('acceptTerms').checked) {
+        document.getElementById('termsError').style.display = 'block';
+        return;
+      }
+
+      // 3. Validate essential fields (basic check)
       if (!formData.businessName || !formData.businessEmail) {
         alert('Please ensure Business Name and Email are provided.');
         showStep(1);
