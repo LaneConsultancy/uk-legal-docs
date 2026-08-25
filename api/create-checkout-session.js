@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const origin = req.headers.origin || req.headers.referer?.replace(/\/$/, '') || 'https://getlegaldocs.co.uk';
+    const origin = 'https://getlegaldocs.co.uk';
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
