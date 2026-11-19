@@ -5,11 +5,11 @@
   status = 301
   force = true
 
-# Gumroad version
+# Gumroad version retired: send old links home
 [[redirects]]
-  from = "/gumroad"
-  to = "/gumroad.html"
-  status = 200
+  from = "/gumroad*"
+  to = "/"
+  status = 301
 
 # SPA fallback
 [[redirects]]
