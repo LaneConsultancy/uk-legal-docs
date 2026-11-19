@@ -7,11 +7,14 @@ const PAID_ID = 'cs_test_a1B2c3D4e5F6g7H8i9J0';
 const UNPAID_ID = 'cs_test_unpaidUnpaidUnpaid01';
 const OTHER_PRODUCT_ID = 'cs_test_otherProductOther01';
 const MISSING_ID = 'cs_test_missingMissingMiss01';
+const EXPIRED_ID = 'cs_test_expiredExpiredExpi01';
+const NOW = Math.floor(Date.now() / 1000);
 
 const sessions = {
-  [PAID_ID]: { mode: 'payment', payment_status: 'paid', line_items: { data: [{ price: { id: PRICE_ID } }] } },
+  [PAID_ID]: { mode: 'payment', payment_status: 'paid', created: NOW, line_items: { data: [{ price: { id: PRICE_ID } }] } },
+  [EXPIRED_ID]: { mode: 'payment', payment_status: 'paid', created: NOW - 2 * 86400, line_items: { data: [{ price: { id: PRICE_ID } }] } },
   [UNPAID_ID]: { mode: 'payment', payment_status: 'unpaid', line_items: { data: [{ price: { id: PRICE_ID } }] } },
-  [OTHER_PRODUCT_ID]: { mode: 'payment', payment_status: 'paid', line_items: { data: [{ price: { id: 'price_other' } }] } },
+  [OTHER_PRODUCT_ID]: { mode: 'payment', payment_status: 'paid', created: NOW, line_items: { data: [{ price: { id: 'price_other' } }] } },
 };
 
 let retrieveCalls;
@@ -98,8 +101,8 @@ test('generate-document returns no document without a session id', async () => {
   assert.equal(res.body.documents, undefined);
 });
 
-test('generate-document returns no document for an unpaid, wrong-product or unknown session', async () => {
-  for (const id of [UNPAID_ID, OTHER_PRODUCT_ID, MISSING_ID]) {
+test('generate-document returns no document for an unpaid, wrong-product, unknown or expired session', async () => {
+  for (const id of [UNPAID_ID, OTHER_PRODUCT_ID, MISSING_ID, EXPIRED_ID]) {
     const res = await call(generateDocument, { session_id: id, formData });
     assert.equal(res.statusCode, 402);
     assert.equal(res.body.documents, undefined);

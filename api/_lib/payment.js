@@ -3,6 +3,7 @@
  */
 
 const SESSION_ID_PATTERN = /^cs_(test|live)_[A-Za-z0-9]{10,200}$/;
+const SESSION_MAX_AGE_SECONDS = 24 * 60 * 60;
 
 /**
  * @param {unknown} sessionId
@@ -41,6 +42,12 @@ async function isSessionPaid(stripe, sessionId) {
   }
 
   if (!session || session.mode !== 'payment' || session.payment_status !== 'paid') {
+    return false;
+  }
+
+  // ponytail: a paid session unlocks generation for 24h only, so a shared session id
+  // stops working. Per-session redemption tracking needs a store; add one if abuse shows up.
+  if (!session.created || Date.now() / 1000 - session.created > SESSION_MAX_AGE_SECONDS) {
     return false;
   }
 
