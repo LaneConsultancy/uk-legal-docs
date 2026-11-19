@@ -1,12 +1,24 @@
 {
   "rewrites": [
-    { "source": "/gumroad", "destination": "/gumroad.html" },
-    { "source": "/((?!api|gumroad\\.html|.*\\..*).*)", "destination": "/index.html" }
+    {
+      "source": "/((?!api|.*\\..*).*)",
+      "destination": "/index.html"
+    }
   ],
   "redirects": [
     {
+      "source": "/gumroad(.html)?",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "www.getlegaldocs.co.uk" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.getlegaldocs.co.uk"
+        }
+      ],
       "destination": "https://getlegaldocs.co.uk/:path",
       "permanent": true
     }
