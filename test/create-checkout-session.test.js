@@ -51,3 +51,29 @@ test('checkout return URLs ignore request headers', async (t) => {
     'https://getlegaldocs.co.uk/?payment=cancelled',
   );
 });
+
+test('checkout errors do not leak Stripe error details', async (t) => {
+  const stripe = {
+    checkout: {
+      sessions: {
+        create: async () => { throw new Error('No such price: price_secret_internal'); },
+      },
+    },
+  };
+  const originalLoad = Module._load;
+  t.mock.method(Module, '_load', function (request, ...args) {
+    return request === 'stripe' ? () => stripe : originalLoad.call(this, request, ...args);
+  });
+  t.mock.method(console, 'error', () => {});
+
+  delete require.cache[require.resolve('../api/create-checkout-session')];
+  const handler = require('../api/create-checkout-session');
+  const response = {
+    status(code) { this.statusCode = code; return this; },
+    json(body) { this.body = body; },
+  };
+  await handler({ method: 'POST', headers: {} }, response);
+
+  assert.equal(response.statusCode, 500);
+  assert.deepEqual(response.body, { error: 'Unable to start checkout' });
+});

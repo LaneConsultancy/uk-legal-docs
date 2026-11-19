@@ -2050,6 +2050,10 @@
 
     // Listen for Gumroad purchase completion
     window.addEventListener('message', function(e) {
+      // Only trust messages that really come from Gumroad's checkout frame
+      if (e.origin !== 'https://gumroad.com' && e.origin !== 'https://app.gumroad.com') {
+        return;
+      }
       // Gumroad sends a message when purchase is complete
       if (e.data && e.data.post_message_name === 'sale') {
         handlePaymentSuccess();
