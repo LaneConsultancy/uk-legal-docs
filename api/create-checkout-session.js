@@ -24,6 +24,6 @@ module.exports = async (req, res) => {
     res.status(200).json({ url: session.url });
   } catch (error) {
     console.error('Stripe error:', error);
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: 'Unable to start checkout' });
   }
 };
